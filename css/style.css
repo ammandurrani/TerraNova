@@ -2408,6 +2408,16 @@ body {
     }
     
     .hero-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        object-fit: cover;
         -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100"><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Garamond, Times New Roman, serif" font-size="8" font-weight="bold" letter-spacing="0.05em" fill="white">TERRA NOVA</text></svg>');
         mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100"><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Garamond, Times New Roman, serif" font-size="8" font-weight="bold" letter-spacing="0.05em" fill="white">TERRA NOVA</text></svg>');
         -webkit-mask-size: 70% auto;
@@ -2636,14 +2646,14 @@ body {
     
     .our-vision-content {
         flex-direction: column;
-        gap: 40px;
+        gap: 15px;
         align-items: center;
     }
     
     .our-vision-images {
         width: 100%;
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
         padding-left: 0;
         justify-content: center;
         align-items: center;
@@ -2656,7 +2666,7 @@ body {
     
     .our-vision-image-top,
     .our-vision-image-bottom {
-        width: 80%;
+        width: 85%;
         transform: translateY(0);
         display: flex;
         justify-content: center;
@@ -2664,16 +2674,18 @@ body {
     
     .our-vision-img {
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
     }
     
     .our-vision-text {
         width: 100%;
         text-align: center;
+        margin-top: -25px;
     }
     
     .our-vision-paragraph {
         text-align: left;
+        margin-bottom: 1rem;
     }
     
     .our-story-content-text {
