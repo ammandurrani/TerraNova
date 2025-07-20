@@ -489,10 +489,8 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('slide-up');
-                } else {
-                    // Remove the class when element is not visible to allow re-animation
-                    entry.target.classList.remove('slide-up');
                 }
+                // Don't remove the class when element is not visible - keep animations permanent
             });
         }, observerOptions);
 
