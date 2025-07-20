@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Terra Nova</title>
+    <link href="https://fonts.googleapis.com/css2?family=SangBleu+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Hamburger Menu -->
+    <nav class="navbar">
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-overlay" id="nav-overlay">
+            <div class="nav-close" id="nav-close">×</div>
+            <div class="nav-content">
+                <h1 class="nav-logo">TERRA NOVA</h1>
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about-us.html">ABOUT US</a></li>
+                    <li><a href="our-story.html">OUR STORY</a></li>
+                    <li><a href="our-vision.html">OUR VISION</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about-us-section" id="about">
+        <div class="about-us-container">
+            <div class="about-us-overlay">
+                <h2 class="about-us-title">Terra Nova Founders</h2>
+                <div class="founders-content">
+                    <div class="founder-profile">
+                        <h3 class="founder-name">Hassan Raza</h3>
+                        <p class="founder-title">Managing Director/Co Founder</p>
+                        <ul class="founder-credentials">
+                            <li class="founder-credential">MBA - Durham University Business School (UK)</li>
+                            <li class="founder-credential">CEO Meditech (USA), CEO Gerry's Group, CEO Daraz (Alibaba)</li>
+                            <li class="founder-credential">Regional Supply Chain Head - MEA & CIS (GSK UK)</li>
+                            <li class="founder-credential">Supply Chain Manager (P&G UK)</li>
+                        </ul>
+                    </div>
+                    <div class="founder-profile">
+                        <h3 class="founder-name">Sajida Ali</h3>
+                        <p class="founder-title">CEO/Co Founder</p>
+                        <ul class="founder-credentials">
+                            <li class="founder-credential">Interior Design, Indus Valley School of Art and Architecture</li>
+                            <li class="founder-credential">15 years design experience</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navOverlay = document.getElementById('nav-overlay');
+        const navClose = document.getElementById('nav-close');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.add('active');
+            navOverlay.classList.add('active');
+        });
+
+        navClose.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navOverlay.classList.remove('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navOverlay.classList.remove('active');
+            });
+        });
+
+        // Scroll-triggered slide-up animation
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const slideUpObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('slide-up');
+                } else {
+                    entry.target.classList.remove('slide-up');
+                }
+            });
+        }, observerOptions);
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Observe about us section elements
+            const aboutUsOverlay = document.querySelector('.about-us-overlay');
+            if (aboutUsOverlay) {
+                slideUpObserver.observe(aboutUsOverlay);
+            }
+            
+            // Observe all founder profiles
+            document.querySelectorAll('.founder-profile').forEach(profile => {
+                slideUpObserver.observe(profile);
+            });
+            
+            // Observe all founder credentials
+            document.querySelectorAll('.founder-credential').forEach(credential => {
+                slideUpObserver.observe(credential);
+            });
+        });
+    </script>
+</body>
+</html>

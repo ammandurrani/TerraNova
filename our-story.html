@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story - Tera Nova</title>
+    <link href="https://fonts.googleapis.com/css2?family=SangBleu+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Hamburger Menu -->
+    <nav class="navbar">
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-overlay" id="nav-overlay">
+            <div class="nav-close" id="nav-close">×</div>
+            <div class="nav-content">
+                <h1 class="nav-logo">TERA NOVA</h1>
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about-us.html">ABOUT US</a></li>
+                    <li><a href="our-story.html">OUR STORY</a></li>
+                    <li><a href="our-vision.html">OUR VISION</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="our-story-section" id="our-story">
+        <div class="our-story-container">
+            <div class="our-story-content">
+                <div class="our-story-image">
+                    <img src="images/extra.jpeg" alt="Our Story" class="our-story-img">
+                </div>
+                <div class="our-story-text">
+                    <h2 class="our-story-title">Our Story</h2>
+                    <div class="our-story-content-text">
+                        <h3 class="our-story-subtitle">The Terra Nova Spark: How a Multinational Business Leader & a Designer Built Terra Nova, a Fusion of Vision & Luxury</h3>
+                        <p class="our-story-paragraph">Terra Nova's journey began at the intersection of two worlds — one shaped by Hassan's vision of global business, the other by Sajida's artistry of design.</p>
+                        
+                        <h4 class="founder-section-title">Sajida<br><span class="founder-role">CEO/Co Founder</span></h4>
+                        <p class="our-story-paragraph">My earliest memories revolved around home – memories of my parents finding beautiful houses in Pakistan and abroad, and then investing time, effort, love, and great pride in turning them into homes. I often heard them extolling the beauty of the spacious bright airy rooms, the white marble floors, the teak woodwork, and the rolling lawns, or debating why one house was better than the other because of location or wind direction. They took me along shopping for Italian furniture and tiles, Egyptian cotton sheets, Persian rugs, and Japanese porcelain ware. Each room was given its own theme - after enthusiastic family deliberation - with complementary furniture, rugs, carpets, curtains, and art and objects.</p>
+                        
+                        <p class="our-story-paragraph">So naturally, I started playing 'house' with my dolls, setting up my own little dream homes, and one of my life's dreams became to have my own home to set up, with my own little curiosity shop with curios from around the world. I would borrow my favourite curios from around the house to set in my room and make my bed with my mother's best bedspreads (my favourite was an Afghan darri spread.) When I was coherent enough, my father started giving me the choices to select my beds and bathrooms, and that was my first foray into objects and materials selection.</p>
+                        
+                        <p class="our-story-paragraph">Wherever I would go, whether homes or hotels or public spaces around the world, the first thing I would notice was the aesthetics, either thinking how I could make it better, or be inspired by it – the joyous mosaic sidewalks in Lisbon, graffiti walls in Berlin, the majestic Gothic doors in Prague and Barcelona, the quiet luxury of the Ritz-Carlton in Vienna, or nature's serene composition of rock and tall grass in the Serengeti savanna. In every travel, seeing the local art, craft, and architecture was an essential part of the itinerary – woodblock printing in Kyoto, carpet weaving in Qom, and Murano glassmaking in Venice.</p>
+                        
+                        <p class="our-story-paragraph">I started with designing and making my children's furniture, bed sets, and curtains (we have them till today in mint condition), moving on to renovating and setting up my own dream home, even painting some textured walls myself, and filling to the brim with collector items which I lugged back home from around the world – local antiques from private collections, Laleh lamps from Iran, porcelain dolls from Hongkong, Venetian mouth-blown glass pendant lamps encased by hand-knotted metalwork, brass and marble candelabras from Porta Portese, and birdcages from Chatuchak.</p>
+                        
+                        <p class="our-story-paragraph">Now where could I take my endless passion to create beauty? I studied interior design at the Indus Valley School of Art and Architecture, and my professors, impressed by my work, placed me in an internship program, and encouraged me to start my own work. My studio launched with interior design, and project offers from other fields started pouring in – repair work, set designs, gardens and gazebos. My hunger for creating more and more beauty made me say "Yes" to every field of design work that came my way. I wanted to create my designs all over the world, and even out in other worlds in space if it would be possible in my lifetime. By now I had done hundreds of projects, and it was time to scale up and take it to the next level. But for this I knew I needed more than creative skills. I needed business acumen. That is when new horizons in the form of Terra Nova emerged with Hassan Raza.</p>
+                        
+                        <p class="our-story-paragraph">Just as I am passionate about creating beauty, Hassan is passionate about creating new opportunities. An MBA-qualified growth-driven business leader with experience across top multinationals, Hassan has led multicultural teams and strategic initiatives across the USA, UK, EU, Far East, Middle East, Africa, CIS, and South Asia.</p>
+                        
+                        <p class="our-story-paragraph">But beyond boardrooms, it was his love for nature, global travel, and architectural heritage that fueled a deeper calling. From the minimalist elegance of Scandinavian design to the vibrant textures of Moroccan riads, he admired how spaces could tell stories. The next step on this trajectory was merging his skills with his passion.</p>
+                        
+                        <p class="our-story-paragraph">When we joined forces, Hassan's bold leadership and clear direction envisioned: What if our design studio could merge global best practices with local beauty and soul? What if it could offer clients spaces that seamlessly merge innovation and nature, luxury and authenticity? That synergy became Terra Nova: where my creative flair is reinforced with Hassan's multinational experience and best business practices including operational excellence; project management; quality assurance; attention to detail; customer obsession; and striking the right balance between budget and service. His mindset of challenging the status quo, right first-time, and continuous improvement positions Terra Nova as a globally inspired, luxury-conscious brand.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navOverlay = document.getElementById('nav-overlay');
+        const navClose = document.getElementById('nav-close');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.add('active');
+            navOverlay.classList.add('active');
+        });
+
+        navClose.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navOverlay.classList.remove('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navOverlay.classList.remove('active');
+            });
+        });
+
+        // Scroll-triggered slide-up animation
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const slideUpObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('slide-up');
+                } else {
+                    entry.target.classList.remove('slide-up');
+                }
+            });
+        }, observerOptions);
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Observe our story section elements
+            const ourStoryImage = document.querySelector('.our-story-image');
+            if (ourStoryImage) {
+                slideUpObserver.observe(ourStoryImage);
+            }
+            
+            const ourStoryText = document.querySelector('.our-story-text');
+            if (ourStoryText) {
+                slideUpObserver.observe(ourStoryText);
+            }
+            
+            // Observe all our story paragraphs
+            document.querySelectorAll('.our-story-paragraph').forEach(paragraph => {
+                slideUpObserver.observe(paragraph);
+            });
+        });
+    </script>
+</body>
+</html>
