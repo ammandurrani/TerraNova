@@ -24,6 +24,9 @@
                     <li><a href="about-us.html">ABOUT US</a></li>
                     <li><a href="our-story.html">OUR STORY</a></li>
                     <li><a href="our-vision.html">OUR VISION</a></li>
+                    <li><a href="approach.html">APPROACH</a></li>
+                    <li><a href="clientele.html">CLIENTELE</a></li>
+                    <li><a href="process.html">PROCESS</a></li>
                 </ul>
             </div>
         </div>
@@ -34,7 +37,7 @@
             <h1 class="hero-title">TERA NOVA</h1>
             <p class="hero-subtitle">Luxury Interior & Exterior Design</p>
             
-            <video class="hero-video" autoplay muted loop>
+            <video class="hero-video" autoplay muted loop playsinline webkit-playsinline>
                 <source src="images/hero-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -63,38 +66,6 @@
         </div>
     </section>
 
-    <section class="approach-section">
-        <div class="approach-container">
-            <div class="approach-content">
-                <div class="approach-image">
-                    <img src="images/approach.jpg" alt="Tera Nova Approach" class="approach-img">
-                </div>
-                <div class="approach-text">
-                    <h2 class="approach-title">Approach</h2>
-                    <ul class="approach-list">
-                        <li class="approach-item">
-                            <strong>Luxury with Purpose:</strong> Every detail is designed to balance architecture and craftsmanship with luxury and comfort.
-                        </li>
-                        <li class="approach-item">
-                            <strong>Client-Centric Collaboration:</strong> We interpret your vision with our craft to create spaces that are uniquely you, prioritising adaptability, transparency, and client collaboration.
-                        </li>
-                        <li class="approach-item">
-                            <strong>Significant Sourcing:</strong> With our extensive access to artisans, ateliers, and heritage brands, we curate a canvas of exclusive, timeless beauty and sensory richness.
-                        </li>
-                        <li class="approach-item">
-                            <strong>Nature-Inspired:</strong> We focus on sustainable interiors, creating spaces that integrate natural light, organic textures, and biophilic design.
-                        </li>
-                        <li class="approach-item">
-                            <strong>Turnkey Execution:</strong> From moodboard to final styling, we manage every phase with precision and discretion.
-                        </li>
-                        <li class="approach-item">
-                            <strong>Globally Grounded:</strong> Your vision is integrated with our global perspective and local precision.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="craft-section">
         <div class="craft-container">
@@ -383,51 +354,7 @@
         </div>
     </section>
 
-    <section class="clientele-section">
-        <div class="clientele-container">
-            <div class="clientele-content">
-                <div class="clientele-image">
-                    <img src="images/clientele.jpeg" alt="Tera Nova Clientele" class="clientele-img">
-                </div>
-                <div class="clientele-text">
-                    <h2 class="clientele-title">Clientele</h2>
-                    <ul class="clientele-list">
-                        <li class="clientele-item">Corporates & Entrepreneurs</li>
-                        <li class="clientele-item">Signature & Luxury Real Estate Developers</li>
-                        <li class="clientele-item">Hospitality, Resorts, & Boutique Spaces</li>
-                        <li class="clientele-item">Retail & Flagship Stores</li>
-                        <li class="clientele-item">Private Residences & Concept Homes</li>
-                        <li class="clientele-item">Entertainment & Creative Patrons</li>
-                        <li class="clientele-item">Cultural & Heritage Spaces</li>
-                        <li class="clientele-item">Civic & Landmark Spaces</li>
-                        <li class="clientele-item">Institutional Spaces</li>
-                        <li class="clientele-item">Curated Events</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-
-    <section class="process-section">
-        <div class="process-container">
-            <div class="process-content">
-                <div class="process-text">
-                    <h2 class="process-title">Process</h2>
-                    <ul class="process-list">
-                        <li class="process-item">Discovery & Consultation</li>
-                        <li class="process-item">Design Vision & Concept Development</li>
-                        <li class="process-item">Material Curation & Detailing</li>
-                        <li class="process-item">Project Oversight</li>
-                        <li class="process-item">Final Reveal</li>
-                    </ul>
-                </div>
-                <div class="process-image">
-                    <img src="images/process.jpg" alt="Tera Nova Process" class="process-img">
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="contact-section">
         <div class="contact-container">
@@ -507,21 +434,6 @@
                 slideUpObserver.observe(imageContainer);
             }
             
-            // Observe approach section elements
-            const approachImage = document.querySelector('.approach-image');
-            if (approachImage) {
-                slideUpObserver.observe(approachImage);
-            }
-            
-            const approachText = document.querySelector('.approach-text');
-            if (approachText) {
-                slideUpObserver.observe(approachText);
-            }
-            
-            // Observe all approach items
-            document.querySelectorAll('.approach-item').forEach(item => {
-                slideUpObserver.observe(item);
-            });
             
             // Observe craft section elements
             const craftOverlay = document.querySelector('.craft-overlay');
@@ -600,37 +512,6 @@
                 slideUpObserver.observe(item);
             });
             
-            // Observe clientele section elements
-            const clienteleImage = document.querySelector('.clientele-image');
-            if (clienteleImage) {
-                slideUpObserver.observe(clienteleImage);
-            }
-            
-            const clienteleText = document.querySelector('.clientele-text');
-            if (clienteleText) {
-                slideUpObserver.observe(clienteleText);
-            }
-            
-            // Observe all clientele items
-            document.querySelectorAll('.clientele-item').forEach(item => {
-                slideUpObserver.observe(item);
-            });
-            
-            // Observe process section elements
-            const processText = document.querySelector('.process-text');
-            if (processText) {
-                slideUpObserver.observe(processText);
-            }
-            
-            const processImage = document.querySelector('.process-image');
-            if (processImage) {
-                slideUpObserver.observe(processImage);
-            }
-            
-            // Observe all process items
-            document.querySelectorAll('.process-item').forEach(item => {
-                slideUpObserver.observe(item);
-            });
             
             // Observe all gallery items
             document.querySelectorAll('.gallery-item').forEach(item => {
