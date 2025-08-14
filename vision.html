@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision - Terra Nova</title>
+    <link href="https://fonts.googleapis.com/css2?family=SangBleu+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Hamburger Menu -->
+    <nav class="navbar">
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-overlay" id="nav-overlay">
+            <div class="nav-close" id="nav-close">×</div>
+            <div class="nav-content">
+                <h1 class="nav-logo">TERRA NOVA</h1>
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-toggle">ABOUT</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="about-us.html">ABOUT US</a></li>
+                            <li><a href="our-story.html">OUR STORY</a></li>
+                            <li><a href="vision.html">VISION</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="approach.html">APPROACH</a></li>
+                    <li><a href="clientele.html">CLIENTELE</a></li>
+                    <li><a href="process.html">PROCESS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="vision-hero-section">
+        <div class="vision-hero-container">
+            <div class="vision-hero-image">
+                <img src="images/Vision.png" alt="Terra Nova Vision Interior" class="vision-img">
+            </div>
+            <div class="vision-hero-content">
+                <h1 class="vision-main-title">VISION</h1>
+                <div class="vision-sections">
+                    <div class="vision-section">
+                        <h2 class="vision-section-title">FOR PAKISTAN</h2>
+                        <p class="vision-section-text">
+                            To elevate luxury design by combining international standards with Pakistan's rich craftsmanship. We'll champion sustainable materials, smart, elegant spaces, and nature-inspired designs in harmony with the land - shaped by topography, surroundings, culture, and light - promoting eco-conscious spaces without sacrificing luxury.
+                        </p>
+                    </div>
+                    <div class="vision-section">
+                        <h2 class="vision-section-title">FOR THE WORLD</h2>
+                        <p class="vision-section-text">
+                            To take Pakistan's untapped design potential to global audiences, making Terra Nova a bridge between global discipline and local artistry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navOverlay = document.getElementById('nav-overlay');
+        const navClose = document.getElementById('nav-close');
+
+        hamburger.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+
+        navClose.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navOverlay.classList.remove('active');
+        });
+
+        // Handle dropdown menu
+        document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                const dropdown = toggle.parentElement;
+                dropdown.classList.toggle('active');
+            });
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a:not(.nav-dropdown-toggle)').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navOverlay.classList.remove('active');
+            });
+        });
+
+        // Scroll-triggered slide-up animation
+        const observerOptions = {
+            threshold: window.innerWidth <= 768 ? 0.05 : 0.2,
+            rootMargin: window.innerWidth <= 768 ? '0px 0px 100px 0px' : '0px 0px -50px 0px'
+        };
+
+        const slideUpObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('slide-up');
+                } else {
+                    entry.target.classList.remove('slide-up');
+                }
+            });
+        }, observerOptions);
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Observe vision content
+            const visionContent = document.querySelector('.vision-hero-content');
+            if (visionContent) {
+                slideUpObserver.observe(visionContent);
+            }
+            
+            // Observe vision sections
+            document.querySelectorAll('.vision-section').forEach(section => {
+                slideUpObserver.observe(section);
+            });
+            
+            // Observe vision image
+            const visionImage = document.querySelector('.vision-hero-image');
+            if (visionImage) {
+                slideUpObserver.observe(visionImage);
+            }
+        });
+    </script>
+</body>
+</html>

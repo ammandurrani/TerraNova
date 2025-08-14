@@ -21,9 +21,14 @@
                 <h1 class="nav-logo">TERRA NOVA</h1>
                 <ul class="nav-links">
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="about-us.html">ABOUT US</a></li>
-                    <li><a href="our-story.html">OUR STORY</a></li>
-                    <li><a href="our-vision.html">OUR VISION</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-toggle">ABOUT</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="about-us.html">ABOUT US</a></li>
+                            <li><a href="our-story.html">OUR STORY</a></li>
+                            <li><a href="vision.html">VISION</a></li>
+                        </ul>
+                    </li>
                     <li><a href="approach.html">APPROACH</a></li>
                     <li><a href="clientele.html">CLIENTELE</a></li>
                     <li><a href="process.html">PROCESS</a></li>
@@ -32,34 +37,50 @@
         </div>
     </nav>
 
-    <section class="approach-section">
-        <div class="approach-container">
-            <div class="approach-content">
-                <div class="approach-image">
-                    <img src="images/approach.jpg" alt="Tera Nova Approach" class="approach-img">
-                </div>
-                <div class="approach-text">
-                    <h2 class="approach-title">Approach</h2>
-                    <ul class="approach-list">
-                        <li class="approach-item">
-                            <strong>Luxury with Purpose:</strong> Every detail is designed to balance architecture and craftsmanship with luxury and comfort.
-                        </li>
-                        <li class="approach-item">
-                            <strong>Client-Centric Collaboration:</strong> We interpret your vision with our craft to create spaces that are uniquely you, prioritising adaptability, transparency, and client collaboration.
-                        </li>
-                        <li class="approach-item">
-                            <strong>Significant Sourcing:</strong> With our extensive access to artisans, ateliers, and heritage brands, we curate a canvas of exclusive, timeless beauty and sensory richness.
-                        </li>
-                        <li class="approach-item">
-                            <strong>Nature-Inspired:</strong> We focus on sustainable interiors, creating spaces that integrate natural light, organic textures, and biophilic design.
-                        </li>
-                        <li class="approach-item">
-                            <strong>Turnkey Execution:</strong> From moodboard to final styling, we manage every phase with precision and discretion.
-                        </li>
-                        <li class="approach-item">
-                            <strong>Globally Grounded:</strong> Your vision is integrated with our global perspective and local precision.
-                        </li>
-                    </ul>
+    <section class="vision-hero-section">
+        <div class="vision-hero-container">
+            <div class="vision-hero-image">
+                <img src="images/approach.jpg" alt="Terra Nova Approach Interior" class="vision-img">
+            </div>
+            <div class="vision-hero-content">
+                <h1 class="vision-main-title">APPROACH</h1>
+                <div class="vision-sections">
+                    <div class="vision-section">
+                        <div class="approach-bullets">
+                            <div class="approach-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Luxury with purpose</span>
+                            </div>
+                            <div class="approach-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Client-centric collaboration</span>
+                            </div>
+                            <div class="approach-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Sustainable, eco-friendly & nature-inspired</span>
+                            </div>
+                            <div class="approach-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Site & contextual design</span>
+                            </div>
+                            <div class="approach-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Current technology integration</span>
+                            </div>
+                            <div class="approach-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Significant sourcing</span>
+                            </div>
+                            <div class="approach-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Globally grounded</span>
+                            </div>
+                            <div class="approach-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Turnkey execution</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,8 +92,7 @@
         const navClose = document.getElementById('nav-close');
 
         hamburger.addEventListener('click', () => {
-            hamburger.classList.add('active');
-            navOverlay.classList.add('active');
+            window.location.href = 'index.html';
         });
 
         navClose.addEventListener('click', () => {
@@ -80,8 +100,17 @@
             navOverlay.classList.remove('active');
         });
 
+        // Handle dropdown menu
+        document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                const dropdown = toggle.parentElement;
+                dropdown.classList.toggle('active');
+            });
+        });
+
         // Close menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
+        document.querySelectorAll('.nav-links a:not(.nav-dropdown-toggle)').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navOverlay.classList.remove('active');
@@ -90,37 +119,108 @@
 
         // Scroll-triggered slide-up animation
         const observerOptions = {
-            threshold: 0.2,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: window.innerWidth <= 768 ? 0.05 : 0.2,
+            rootMargin: window.innerWidth <= 768 ? '0px 0px 100px 0px' : '0px 0px -50px 0px'
         };
 
         const slideUpObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('slide-up');
+                } else {
+                    entry.target.classList.remove('slide-up');
                 }
-                // Don't remove the class when element is not visible - keep animations permanent
             });
         }, observerOptions);
 
         // Wait for DOM to be fully loaded
         document.addEventListener('DOMContentLoaded', () => {
-            // Observe approach section elements
-            const approachImage = document.querySelector('.approach-image');
+            // Observe approach content
+            const approachContent = document.querySelector('.vision-hero-content');
+            if (approachContent) {
+                slideUpObserver.observe(approachContent);
+            }
+            
+            // Observe approach sections
+            document.querySelectorAll('.vision-section').forEach(section => {
+                slideUpObserver.observe(section);
+            });
+            
+            // Observe approach image
+            const approachImage = document.querySelector('.vision-hero-image');
             if (approachImage) {
                 slideUpObserver.observe(approachImage);
             }
-            
-            const approachText = document.querySelector('.approach-text');
-            if (approachText) {
-                slideUpObserver.observe(approachText);
-            }
-            
-            // Observe all approach items
-            document.querySelectorAll('.approach-item').forEach(item => {
+
+            // Observe individual bullet items for staggered animation
+            document.querySelectorAll('.approach-bullet-item').forEach((item, index) => {
+                item.style.transitionDelay = `${0.1 + (index * 0.1)}s`;
                 slideUpObserver.observe(item);
             });
         });
     </script>
+
+    <style>
+        /* Approach-specific styles */
+        .approach-bullets {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .approach-bullet-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .approach-bullet-item.slide-up {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .bullet-point {
+            color: #4E4B47;
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+            flex-shrink: 0;
+        }
+
+        .bullet-text {
+            font-family: 'Garamond', 'Times New Roman', serif;
+            font-size: clamp(0.95rem, 1.9vw, 1.15rem);
+            line-height: 1.6;
+            color: #4E4B47;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .approach-bullets {
+                gap: 1.2rem;
+            }
+            
+            .approach-bullet-item {
+                gap: 0.8rem;
+            }
+            
+            .bullet-text {
+                font-size: clamp(1rem, 3vw, 1.2rem);
+                line-height: 1.5;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .approach-bullets {
+                gap: 1rem;
+            }
+            
+            .bullet-text {
+                font-size: clamp(1.1rem, 4vw, 1.3rem);
+            }
+        }
+    </style>
 </body>
 </html>

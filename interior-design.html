@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design - Terra Nova</title>
+    <link href="https://fonts.googleapis.com/css2?family=SangBleu+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Hamburger Menu -->
+    <nav class="navbar">
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-overlay" id="nav-overlay">
+            <div class="nav-close" id="nav-close">×</div>
+            <div class="nav-content">
+                <h1 class="nav-logo">TERRA NOVA</h1>
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-toggle">ABOUT</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="about-us.html">ABOUT US</a></li>
+                            <li><a href="our-story.html">OUR STORY</a></li>
+                            <li><a href="vision.html">VISION</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="approach.html">APPROACH</a></li>
+                    <li><a href="process.html">PROCESS</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-toggle">CRAFT</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="interior-design.html">INTERIOR DESIGN</a></li>
+                            <li><a href="exterior-design.html">EXTERIOR DESIGN</a></li>
+                            <li><a href="landscape-design.html">LANDSCAPE DESIGN</a></li>
+                            <li><a href="display-design.html">DISPLAY DESIGN</a></li>
+                            <li><a href="event-design.html">EVENT DESIGN</a></li>
+                            <li><a href="floral-design.html">FLORAL DESIGN</a></li>
+                            <li><a href="remodeling.html">REMODELING & RENOVATIONS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="clientele.html">CLIENTELE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="vision-hero-section">
+        <div class="vision-hero-container">
+            <div class="vision-hero-image">
+                <img src="images/interior design.jpeg" alt="Terra Nova Interior Design" class="vision-img">
+            </div>
+            <div class="vision-hero-content">
+                <h1 class="vision-main-title">INTERIOR DESIGN</h1>
+                <div class="vision-sections">
+                    <div class="vision-section">
+                        <div class="interior-design-bullets">
+                            <div class="interior-design-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Full-scope interior design</span>
+                            </div>
+                            <div class="interior-design-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Interior-architecture integration</span>
+                            </div>
+                            <div class="interior-design-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Spatial planning & custom layout</span>
+                            </div>
+                            <div class="interior-design-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Structural design</span>
+                            </div>
+                            <div class="interior-design-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Furniture & fixtures custom design, procurement, & curation</span>
+                            </div>
+                            <div class="interior-design-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Material palettes & finish selection</span>
+                            </div>
+                            <div class="interior-design-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Art & object curation</span>
+                            </div>
+                            <div class="interior-design-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Styling & installation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navOverlay = document.getElementById('nav-overlay');
+        const navClose = document.getElementById('nav-close');
+
+        hamburger.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+
+        navClose.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navOverlay.classList.remove('active');
+        });
+
+        // Handle dropdown menu
+        document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                const dropdown = toggle.parentElement;
+                dropdown.classList.toggle('active');
+            });
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a:not(.nav-dropdown-toggle)').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navOverlay.classList.remove('active');
+            });
+        });
+
+        // Scroll-triggered slide-up animation
+        const observerOptions = {
+            threshold: window.innerWidth <= 768 ? 0.05 : 0.2,
+            rootMargin: window.innerWidth <= 768 ? '0px 0px 100px 0px' : '0px 0px -50px 0px'
+        };
+
+        const slideUpObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('slide-up');
+                } else {
+                    entry.target.classList.remove('slide-up');
+                }
+            });
+        }, observerOptions);
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Observe interior design content
+            const interiorDesignContent = document.querySelector('.vision-hero-content');
+            if (interiorDesignContent) {
+                slideUpObserver.observe(interiorDesignContent);
+            }
+            
+            // Observe interior design sections
+            document.querySelectorAll('.vision-section').forEach(section => {
+                slideUpObserver.observe(section);
+            });
+            
+            // Observe interior design image
+            const interiorDesignImage = document.querySelector('.vision-hero-image');
+            if (interiorDesignImage) {
+                slideUpObserver.observe(interiorDesignImage);
+            }
+
+            // Observe individual bullet items for staggered animation
+            document.querySelectorAll('.interior-design-bullet-item').forEach((item, index) => {
+                item.style.transitionDelay = `${0.1 + (index * 0.1)}s`;
+                slideUpObserver.observe(item);
+            });
+        });
+    </script>
+
+    <style>
+        /* Ensure hamburger icon is visible */
+        .hamburger {
+            display: flex !important;
+            flex-direction: column;
+            cursor: pointer;
+            width: 30px;
+            height: 24px;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 100%;
+            height: 3px;
+            background-color: white !important;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        /* Interior Design-specific styles */
+        .interior-design-bullets {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .interior-design-bullet-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .interior-design-bullet-item.slide-up {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .bullet-point {
+            color: #4E4B47;
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+            flex-shrink: 0;
+        }
+
+        .bullet-text {
+            font-family: 'Garamond', 'Times New Roman', serif;
+            font-size: clamp(0.95rem, 1.9vw, 1.15rem);
+            line-height: 1.6;
+            color: #4E4B47;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .interior-design-bullets {
+                gap: 1.2rem;
+            }
+            
+            .interior-design-bullet-item {
+                gap: 0.8rem;
+            }
+            
+            .bullet-text {
+                font-size: clamp(1rem, 3vw, 1.2rem);
+                line-height: 1.5;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .interior-design-bullets {
+                gap: 1rem;
+            }
+            
+            .bullet-text {
+                font-size: clamp(1.1rem, 4vw, 1.3rem);
+            }
+        }
+    </style>
+</body>
+</html>

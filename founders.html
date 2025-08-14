@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Founders - Terra Nova</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'EB Garamond', serif;
+            background-color: #F8F0E7;
+            color: #262626;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: transparent;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            position: relative;
+        }
+
+
+        .nav-links a {
+            text-decoration: none;
+            color: #8D5848;
+            font-weight: 400;
+            font-size: 16px;
+            font-family: 'EB Garamond', serif;
+            letter-spacing: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #5a4a3a;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #F8F0E7;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border: 1px solid #8D5848;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown-content a {
+            color: #8D5848;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-family: 'EB Garamond', serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f8f8f0;
+            color: #5a4a3a;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+        }
+
+        /* Page Title */
+        .page-title {
+            font-family: 'EB Garamond', serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: #262626;
+            letter-spacing: 10px;
+            text-align: center;
+            margin-bottom: 3px;
+        }
+
+        /* Founders Grid */
+        .founders-section {
+            margin-top: 20px;
+        }
+
+        .founder-profile {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+
+        .founder-content {
+            flex: 2;
+        }
+
+        .founder-photo {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .founder-photo img {
+            width: 220px;
+            height: 270px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            background-color: #F8F0E7;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .founder-name {
+            font-family: 'EB Garamond', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #262626;
+            letter-spacing: 6px;
+            margin-bottom: 10px;
+        }
+
+        .founder-title {
+            font-family: 'EB Garamond', serif;
+            font-size: 18px;
+            color: #262626;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .founder-details {
+            list-style: none;
+            padding: 0;
+        }
+
+        .founder-details li {
+            font-family: 'EB Garamond', serif;
+            font-size: 16px;
+            color: #262626;
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .founder-details li::before {
+            content: '■';
+            color: #262626;
+            font-size: 12px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .founder-details li strong {
+            color: #262626;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .founder-profile {
+                flex-direction: column;
+                gap: 40px;
+                text-align: center;
+            }
+            
+            .founder-photo img {
+                width: 180px;
+                height: 220px;
+            }
+            
+            .founder-name {
+                font-size: 28px;
+                letter-spacing: 4px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            .page-title {
+                font-size: 30px;
+                letter-spacing: 5px;
+            }
+            
+            .founder-photo img {
+                width: 165px;
+                height: 200px;
+            }
+            
+            .founder-name {
+                font-size: 24px;
+                letter-spacing: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown">
+                <a href="#">ABOUT</a>
+                <div class="dropdown-content">
+                    <a href="founders.html">FOUNDERS</a>
+                    <a href="our-story.html">OUR STORY</a>
+                    <a href="vision.html">VISION</a>
+                </div>
+            </li>
+            <li><a href="approach.html">APPROACH</a></li>
+            <li><a href="process.html">PROCESS</a></li>
+            <li class="dropdown">
+                <a href="#">CRAFT</a>
+                <div class="dropdown-content">
+                    <a href="interior-design.html">INTERIOR DESIGN</a>
+                    <a href="exterior-design.html">EXTERIOR DESIGN</a>
+                    <a href="landscape-design.html">LANDSCAPE DESIGN</a>
+                    <a href="display-design.html">DISPLAY DESIGN</a>
+                    <a href="event-design.html">EVENT DESIGN</a>
+                    <a href="floral-design.html">FLORAL DESIGN</a>
+                    <a href="remodeling.html">REMODELING & RENOVATIONS</a>
+                </div>
+            </li>
+            <li><a href="clientele.html">CLIENTELE</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <h1 class="page-title">FOUNDERS</h1>
+        
+        <div class="founders-section">
+            <!-- Hassan Raza -->
+            <div class="founder-profile">
+                <div class="founder-content">
+                    <h2 class="founder-name">HASSAN RAZA</h2>
+                    <p class="founder-title">Managing Director/Co Founder</p>
+                    
+                    <ul class="founder-details">
+                        <li>MBA - Durham University Business School (UK)</li>
+                        <li>CEO Meditech (USA), CEO Gerry's Group, CEO Daraz (Alibaba)</li>
+                        <li>Regional Supply Chain Head - MEA & CIS (GSK UK)</li>
+                        <li>Supply Chain Manager (P&G UK)</li>
+                    </ul>
+                </div>
+                <div class="founder-photo">
+                    <img src="images/pic1.png" alt="Hassan Raza - Managing Director/Co Founder">
+                </div>
+            </div>
+            
+            <!-- Sajida Ali -->
+            <div class="founder-profile">
+                <div class="founder-content">
+                    <h2 class="founder-name">SAJIDA ALI</h2>
+                    <p class="founder-title">CEO/Co Founder</p>
+                    
+                    <ul class="founder-details">
+                        <li>Interior Design, Indus Valley School Of Art and Architecture</li>
+                        <li>15 Years' Design Experience</li>
+                    </ul>
+                </div>
+                <div class="founder-photo">
+                    <img src="images/Picture2.png" alt="Sajida Ali - CEO/Co Founder">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

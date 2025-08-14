@@ -3,585 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terra Nova</title>
-    <link href="https://fonts.googleapis.com/css2?family=SangBleu+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Terra Nova - Luxury Interior & Exterior Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'EB Garamond', serif;
+            background-color: #F8F0E7;
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: transparent;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            position: relative;
+        }
+
+
+        .nav-links a {
+            text-decoration: none;
+            color: #8D5848;
+            font-weight: 400;
+            font-size: 16px;
+            font-family: 'EB Garamond', serif;
+            letter-spacing: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #5a4a3a;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #F8F0E7;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border: 1px solid #8D5848;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown-content a {
+            color: #8D5848;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-family: 'EB Garamond', serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f8f8f0;
+            color: #5a4a3a;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5px 20px;
+        }
+
+        /* Logo Section */
+        .logo-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-box {
+            display: inline-block;
+            border: 2px solid #8D5848;
+            padding: 15px 40px;
+            background-color: #F8F0E7;
+        }
+
+        .logo-title {
+            font-family: 'EB Garamond', serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: #8D5848;
+            letter-spacing: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .logo-subtitle {
+            font-family: 'EB Garamond', serif;
+            font-size: 16px;
+            color: #8D5848;
+            letter-spacing: 3px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            gap: 60px;
+            align-items: stretch;
+            margin-top: 40px;
+        }
+
+        .hero-image {
+            flex: 1.1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 55%;
+            object-fit: cover;
+            object-position: left center;
+            border-radius: 0;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-left: 40px;
+        }
+
+        .hero-welcome {
+            font-family: 'EB Garamond', serif;
+            font-size: 16px;
+            font-weight: 400;
+            font-style: italic;
+            color: #333;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        .hero-text {
+            font-family: 'EB Garamond', serif;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .nav-links {
+                gap: 25px;
+            }
+            
+            .nav-links a {
+                font-size: 14px;
+            }
+            
+            .logo-title {
+                font-size: 36px;
+                letter-spacing: 4px;
+            }
+            
+            .hero-section {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .hero-content {
+                padding-left: 0;
+            }
+            
+            .hero-welcome {
+                font-size: 16px;
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            .logo-box {
+                padding: 20px 40px;
+            }
+            
+            .logo-title {
+                font-size: 28px;
+                letter-spacing: 2px;
+            }
+            
+            .logo-subtitle {
+                font-size: 12px;
+            }
+            
+            .main-container {
+                padding: 20px 15px;
+            }
+            
+            .hero-welcome {
+                font-size: 16px;
+            }
+            
+            .hero-text {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Hamburger Menu -->
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="nav-overlay" id="nav-overlay">
-            <div class="nav-close" id="nav-close">×</div>
-            <div class="nav-content">
-                <h1 class="nav-logo">TERRA NOVA</h1>
-                <ul class="nav-links">
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="about-us.html">ABOUT US</a></li>
-                    <li><a href="our-story.html">OUR STORY</a></li>
-                    <li><a href="our-vision.html">OUR VISION</a></li>
-                    <li><a href="approach.html">APPROACH</a></li>
-                    <li><a href="clientele.html">CLIENTELE</a></li>
-                    <li><a href="process.html">PROCESS</a></li>
-                </ul>
-            </div>
-        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown">
+                <a href="#">ABOUT</a>
+                <div class="dropdown-content">
+                    <a href="founders.html">FOUNDERS</a>
+                    <a href="our-story.html">OUR STORY</a>
+                    <a href="vision.html">VISION</a>
+                </div>
+            </li>
+            <li><a href="approach.html">APPROACH</a></li>
+            <li><a href="process.html">PROCESS</a></li>
+            <li class="dropdown">
+                <a href="#">CRAFT</a>
+                <div class="dropdown-content">
+                    <a href="interior-design.html">INTERIOR DESIGN</a>
+                    <a href="exterior-design.html">EXTERIOR DESIGN</a>
+                    <a href="landscape-design.html">LANDSCAPE DESIGN</a>
+                    <a href="display-design.html">DISPLAY DESIGN</a>
+                    <a href="event-design.html">EVENT DESIGN</a>
+                    <a href="floral-design.html">FLORAL DESIGN</a>
+                    <a href="remodeling.html">REMODELING & RENOVATIONS</a>
+                </div>
+            </li>
+            <li><a href="clientele.html">CLIENTELE</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">TERA NOVA</h1>
-            <p class="hero-subtitle">Luxury Interior & Exterior Design</p>
-            
-            <video class="hero-video" autoplay muted loop playsinline webkit-playsinline>
-                <source src="images/hero-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
-
-    <section class="about-section">
-        <div class="about-container">
-            <div class="about-content">
-                <div class="about-paragraph">
-                    <p>At Terra Nova, we create luxury living through elegant interior and exterior design, blending local craftsmanship with global innovation to craft spaces of universal, timeless distinction and sophistication. We craft structures that are more than spaces — we compose refined experiences written in texture, stone, light, and silhouette that embody enduring style.</p>
-                </div>
-                <div class="about-paragraph">
-                    <p>Whether your style is minimal, classic, modern, or bold, our harmonious blend of local and global aesthetics, artistry, and eco-conscious architecture merges with client focus to shape your vision into meaningful, functional, sustainable spaces that tell your story with beauty and purpose.</p>
-                </div>
-                <div class="about-paragraph">
-                    <p>Every Terra Nova project is infused with heritage and inspired by the world, integrating these influences into designs without borders.</p>
-                </div>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <div class="logo-box">
+                <h1 class="logo-title">TERRA NOVA</h1>
+                <p class="logo-subtitle">LUXURY INTERIOR & EXTERIOR DESIGN</p>
             </div>
         </div>
-    </section>
 
-    <section class="image-section">
-        <div class="image-container">
-            <img src="images/home.jpeg" alt="Terra Nova Home Design" class="section-image">
-        </div>
-    </section>
-
-
-    <section class="craft-section">
-        <div class="craft-container">
-            <div class="craft-overlay">
-                <h2 class="craft-title">Craft</h2>
-                <ul class="craft-list">
-                    <li class="craft-item">Interior Design</li>
-                    <li class="craft-item">Architectural Design</li>
-                    <li class="craft-item">Landscape Design</li>
-                    <li class="craft-item">Display Design</li>
-                    <li class="craft-item">Event Design</li>
-                    <li class="craft-item">Remodeling & Renovations</li>
-                </ul>
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="hero-image">
+                <img src="images/home.jpeg" alt="Luxury Interior Design by Terra Nova">
+            </div>
+            
+            <div class="hero-content">
+                <h2 class="hero-welcome">Welcome to Terra Nova — Where Vision Meets Luxury</h2>
+                
+                <p class="hero-text">
+                    At Terra Nova, we create luxury living through elegant interior and exterior design, blending local craftsmanship with global innovation to craft spaces of universal, timeless distinction and sophistication. We craft structures that are more than spaces — we compose refined experiences written in texture, stone, light, and silhouette that embody enduring style.
+                </p>
+                
+                <p class="hero-text">
+                    Whether your style is minimal, classic, modern, or bold, our harmonious blend of local and global aesthetics, artistry, and eco-conscious architecture merges with client focus to shape your vision into meaningful, functional, sustainable spaces that tell your story with beauty and purpose.
+                </p>
+                
+                <p class="hero-text">
+                    Every Terra Nova project is infused with heritage and inspired by the world, integrating these influences into designs without borders.
+                </p>
             </div>
         </div>
-    </section>
-
-    <section class="gallery-section">
-        <div class="gallery-container">
-            <div class="gallery-grid">
-                <div class="gallery-item gallery-medium">
-                    <img src="images/craft.jpeg" alt="Tera Nova Craft" class="gallery-image">
-                </div>
-                <div class="gallery-item gallery-large">
-                    <img src="images/about.jpeg" alt="Tera Nova About" class="gallery-image">
-                </div>
-                <div class="gallery-item gallery-medium">
-                    <img src="images/clientele.jpeg" alt="Tera Nova Clientele" class="gallery-image">
-                </div>
-                <div class="gallery-item gallery-small">
-                    <img src="images/process.jpg" alt="Tera Nova Process" class="gallery-image">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="interior-design-section">
-        <div class="interior-design-container">
-            <div class="interior-design-overlay">
-                <h2 class="interior-design-title">Interior Design</h2>
-                <ul class="interior-design-list">
-                    <li class="interior-design-item">
-                        <strong>Full-Scope Interior Design</strong><br>
-                        From concept to personalised consultations to completion.
-                    </li>
-                    <li class="interior-design-item">
-                        <strong>Interior Architecture Integration</strong><br>
-                        Seamless flow between structure and interior.
-                    </li>
-                    <li class="interior-design-item">
-                        <strong>Spatial Planning & Custom Layout</strong><br>
-                        Optimizing flow, function, and form in 2D and 3D sketches.
-                    </li>
-                    <li class="interior-design-item">
-                        <strong>Furniture, Fixtures & Equipment Procurement & Curation</strong><br>
-                        Bespoke selection and sourcing of furnishings, lighting, and accessories.
-                    </li>
-                    <li class="interior-design-item">
-                        <strong>Custom Furniture & Woodwork Design</strong><br>
-                        Signature pieces crafted with precision and personality.
-                    </li>
-                    <li class="interior-design-item">
-                        <strong>Material Palettes & Finish Selection</strong><br>
-                        A library of textures and colours: tactile finishes, fine stones, rich woods, and exclusive textiles.
-                    </li>
-                    <li class="interior-design-item">
-                        <strong>Art & Object Curation</strong><br>
-                        Statement curios for layered detail, atmosphere, and aesthetics.
-                    </li>
-                    <li class="interior-design-item">
-                        <strong>Styling & Installation</strong><br>
-                        Final styling to create a meaningful narrative that celebrates your personality.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="architectural-design-section">
-        <div class="architectural-design-container">
-            <div class="architectural-design-overlay">
-                <h2 class="architectural-design-title">Architectural Design</h2>
-                <ul class="architectural-design-list">
-                    <li class="architectural-design-item">
-                        <strong>Structural Integration of Design Concepts</strong><br>
-                        Artful, seamless design-construction coordination.
-                    </li>
-                    <li class="architectural-design-item">
-                        <strong>Site & Contextual Design</strong><br>
-                        Architecture designed in harmony with the land - shaped by topography, light, culture, and surroundings.
-                    </li>
-                    <li class="architectural-design-item">
-                        <strong>Signature Façade Design & Sculptural Detailing</strong><br>
-                        Detailed design of exterior treatments and tailored building envelopes featuring sculptural precision, bespoke materials, and refined craftsmanship.
-                    </li>
-                    <li class="architectural-design-item">
-                        <strong>Custom Pavilion & Outbuilding Design</strong><br>
-                        Freestanding architectural beautifications including conservatories, garden pavilions, rooftop and terrace design, guesthouses, and wellness retreats.
-                    </li>
-                    <li class="architectural-design-item">
-                        <strong>Architectural Lighting Design</strong><br>
-                        Both natural and artificial light systems holistically integrated and used as an architectural medium to sculpt, reveal, and compose space.
-                    </li>
-                    <li class="architectural-design-item">
-                        <strong>Turnkey Exterior Design & Delivery</strong><br>
-                        End-to-end management and execution of your architectural vision, from master plans to outdoor living environments, ensuring craftsmanship, compliance, and control at every stage to deliver permanence, sustainability, and timeless design.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="landscape-design-section">
-        <div class="landscape-design-container">
-            <div class="landscape-design-overlay">
-                <h2 class="landscape-design-title">Landscape Design</h2>
-                <ul class="landscape-design-list">
-                    <li class="landscape-design-item">
-                        <strong>Estate Landscape Master Planning</strong><br>
-                        Our horticultural compositions of color, texture, and seasonal rhythm are curated for beauty, privacy, and botanical storytelling complementing long-term planning with seasonal styling.
-                    </li>
-                    <li class="landscape-design-item">
-                        <strong>Garden Architecture & Outdoor Rooms</strong><br>
-                        Design of bespoke structured outdoor spaces where architecture and nature converge — including pergolas, courtyards, terraces, dining pavilions, spa houses, wellness retreats, and contemplative gardens with architectural form.
-                    </li>
-                    <li class="landscape-design-item">
-                        <strong>Water Features & Reflective Pools</strong><br>
-                        From modern linear fountains to traditional water features — we use water as a sculptural and sensory design element.
-                    </li>
-                    <li class="landscape-design-item">
-                        <strong>Landscape Lighting Design</strong><br>
-                        Discreet and artful illumination that enhances atmosphere, ensures safety, and brings the landscape to life after dark.
-                    </li>
-                    <li class="landscape-design-item">
-                        <strong>Exterior Materials, Hardscape Integration & Garden Art Curation</strong><br>
-                        Curated stone, timber, and surface finishes; signature planters; and sculptural pieces — selected for tactile richness and design continuity from indoor to outdoor.
-                    </li>
-                    <li class="landscape-design-item">
-                        <strong>Environmental & Site-Specific Design</strong><br>
-                        Sensitive, sustainable strategies including rainwater harvesting, native planting, and integration with climate and ecology.
-                    </li>
-                    <li class="landscape-design-item">
-                        <strong>Turnkey Landscape Installation</strong><br>
-                        Full-service comprehensive delivery fine-tuning the landscape as a living canvas — blending topography, lifestyle needs, and visual harmony.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="display-design-section">
-        <div class="display-design-container">
-            <div class="display-design-overlay">
-                <h2 class="display-design-title">Display Design</h2>
-                <ul class="display-design-list">
-                    <li class="display-design-item">
-                        <strong>Bespoke Visual Merchandising Environments</strong><br>
-                        Design and fabrication of luxury-tier display settings that highlight products — orchestrating light, texture, and material to reveal, dramatize, and elevate perception
-                    </li>
-                    <li class="display-design-item">
-                        <strong>Exhibition & Gallery Display Architecture</strong><br>
-                        Architectural-level planning for temporary or permanent exhibitions — integrating circulation, wall design, lighting, and mounting systems with curatorial intent
-                    </li>
-                    <li class="display-design-item">
-                        <strong>Brand Experience Installations</strong><br>
-                        Multi-sensory displays crafted as spatial narratives — designed to express brand heritage, artistry, or product story in a refined and memorable way
-                    </li>
-                    <li class="display-design-item">
-                        <strong>Object & Artifact Display Design</strong><br>
-                        Custom vitrines and pedestals created for fashion, jewelry, sculpture, or heritage objects — where the display is as crafted as the piece itself and objects are staged with meaning
-                    </li>
-                    <li class="display-design-item">
-                        <strong>Window Display Design</strong><br>
-                        High-impact, sculptural storefront displays that invite and inspire — designed for seasonal campaigns, couture drops, or cultural collaborations
-                    </li>
-                    <li class="display-design-item">
-                        <strong>Modular Display Systems & Architectural Fixtures</strong><br>
-                        Design of high-end display systems tailored for luxury retail, flagship boutiques, cultural institutions, private collections, and seasonal installations
-                    </li>
-                    <li class="display-design-item">
-                        <strong>Temporary & Permanent Display Installations</strong><br>
-                        Whether ephemeral for an event or enduring within a boutique or museum, we design with both temporality and legacy in mind
-                    </li>
-                    <li class="display-design-item">
-                        <strong>Concept-to-Fabrication Oversight</strong><br>
-                        Full project control — from ideation to production, fabrication, and on-site installation, our display design services are a curation of spatial storytelling — a fusion of art direction and brand architecture — where every display is an artful expression of identity and atmosphere.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="event-design-section">
-        <div class="event-design-container">
-            <div class="event-design-overlay">
-                <h2 class="event-design-title">Event Design</h2>
-                <ul class="event-design-list">
-                    <li class="event-design-item">
-                        <strong>Bespoke Spatial Design for Events</strong><br>
-                        Creation of custom-built event environments — from architectural installations to elegant spatial layouts — tailored to the venue and narrative, and designed to elevate galas, premieres, brand unveilings, and private celebrations
-                    </li>
-                    <li class="event-design-item">
-                        <strong>Set & Scenic Design</strong><br>
-                        Sculptural staging and spatial storytelling using texture, structure, and light — creating dramatic visual compositions that unfold throughout the event
-                    </li>
-                    <li class="event-design-item">
-                        <strong>Immersive Guest Journey Mapping</strong><br>
-                        Staging the sequences of events — from entrance to departure — with carefully considered pacing, reveal moments, and atmosphere transitions
-                    </li>
-                    <li class="event-design-item">
-                        <strong>Custom Furnishings & Décor Fabrication</strong><br>
-                        One-of-a-kind objects crafted for events — including statement tables, lighting elements, art objects, and floral architecture — delivering elegance and visual drama
-                    </li>
-                    <li class="event-design-item">
-                        <strong>Architectural Installations & Brand Pavilions</strong><br>
-                        Temporary structures and signature brand expressions that serve as focal points for luxury activations, launches, or cultural programs
-                    </li>
-                    <li class="event-design-item">
-                        <strong>Landscape & Outdoor Event Styling</strong><br>
-                        Transforming gardens, courtyards, and rooftops into stage environments — with curated lighting, floral, and spatial zoning
-                    </li>
-                    <li class="event-design-item">
-                        <strong>Private Client Event Design</strong><br>
-                        Intimate, opulent experiences for weddings, anniversaries, and family gatherings — designed with personal narrative
-                    </li>
-                    <li class="event-design-item">
-                        <strong>Cultural & Institutional Event Collaborations</strong><br>
-                        Creative partnerships with galleries, museums, and heritage institutions — crafting environments that honor legacy
-                    </li>
-                    <li class="event-design-item">
-                        <strong>Concept-to-Completion Production Oversight</strong><br>
-                        Comprehensive high-art experiences — including design detailing, vendor coordination, and on-site creative direction — to transform spaces into spectacles
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="remodeling-renovation-section">
-        <div class="remodeling-renovation-container">
-            <div class="remodeling-renovation-overlay">
-                <h2 class="remodeling-renovation-title">Remodeling & Renovation</h2>
-                <ul class="remodeling-renovation-list">
-                    <li class="remodeling-renovation-item">
-                        <strong>Remodeling Services</strong><br>
-                        For clients who value elegance in every detail in maintenance and upkeep
-                    </li>
-                    <li class="remodeling-renovation-item">
-                        <strong>Architectural Detailing Repairs</strong><br>
-                        Meticulous repair of structural surfaces
-                    </li>
-                    <li class="remodeling-renovation-item">
-                        <strong>Stone, Marble & Tile Restoration</strong><br>
-                        Precision chip filling, surface polishing, and grouting
-                    </li>
-                    <li class="remodeling-renovation-item">
-                        <strong>Luxury Fixture & Hardware Replacement</strong><br>
-                        Discreet upgrades or repairs using high-end or custom-sourced components.
-                    </li>
-                    <li class="remodeling-renovation-item">
-                        <strong>Surface Refinishing</strong><br>
-                        Re-coating, sealing, or finishing of luxury surfaces including lacquer, timber, and metal. Renovation Services
-                    </li>
-                    <li class="remodeling-renovation-item">
-                        <strong>Reimagining spaces with harmony, flow, and luxury</strong><br>
-                        Full-Space Reconfiguration Strategic layout redesigns that optimize function and elevate design.
-                    </li>
-                    <li class="remodeling-renovation-item">
-                        <strong>Kitchen & Bath Luxury Renovations</strong><br>
-                        Custom cabinetry, designer fixtures, natural stone surfaces, and smart integration.
-                    </li>
-                    <li class="remodeling-renovation-item">
-                        <strong>Flooring Upgrades</strong><br>
-                        Installation of marble, stone, wood or other luxury materials in classic patterns like parquetry and herringbone
-                    </li>
-                    <li class="remodeling-renovation-item">
-                        <strong>Acoustic, Lighting & Smart Home Integration</strong><br>
-                        Discreetly embedded technology that enhances ambiance and control
-                    </li>
-                    <li class="remodeling-renovation-item">
-                        <strong>Design-Build Coordination</strong><br>
-                        Seamless end-to-end delivery including reconstruction
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-
-
-    <section class="contact-section">
-        <div class="contact-container">
-            <div class="contact-overlay">
-                <h2 class="contact-title">Contact</h2>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Name:</label>
-                        <input type="text" id="name" name="name" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email:</label>
-                        <input type="email" id="email" name="email" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone" class="form-label">Phone:</label>
-                        <input type="tel" id="phone" name="phone" class="form-input" pattern="[0-9+\-\s\(\)]+" title="Please enter numbers only" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="form-label">Query:</label>
-                        <textarea id="message" name="message" class="form-textarea" required></textarea>
-                    </div>
-                    <a href="#" class="whatsapp-button" id="whatsappButton">WhatsApp</a>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const navOverlay = document.getElementById('nav-overlay');
-        const navClose = document.getElementById('nav-close');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.add('active');
-            navOverlay.classList.add('active');
-        });
-
-        navClose.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navOverlay.classList.remove('active');
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navOverlay.classList.remove('active');
-            });
-        });
-
-        // Scroll-triggered slide-up animation
-        const observerOptions = {
-            threshold: 0.2,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const slideUpObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('slide-up');
-                }
-                // Don't remove the class when element is not visible - keep animations permanent
-            });
-        }, observerOptions);
-
-        // Wait for DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            // Observe all about paragraphs
-            document.querySelectorAll('.about-paragraph').forEach(paragraph => {
-                slideUpObserver.observe(paragraph);
-            });
-            
-            // Observe the image container
-            const imageContainer = document.querySelector('.image-container');
-            if (imageContainer) {
-                slideUpObserver.observe(imageContainer);
-            }
-            
-            
-            // Observe craft section elements
-            const craftOverlay = document.querySelector('.craft-overlay');
-            if (craftOverlay) {
-                slideUpObserver.observe(craftOverlay);
-            }
-            
-            // Observe all craft items
-            document.querySelectorAll('.craft-item').forEach(item => {
-                slideUpObserver.observe(item);
-            });
-            
-            // Observe interior design section elements
-            const interiorDesignOverlay = document.querySelector('.interior-design-overlay');
-            if (interiorDesignOverlay) {
-                slideUpObserver.observe(interiorDesignOverlay);
-            }
-            
-            // Observe all interior design items
-            document.querySelectorAll('.interior-design-item').forEach(item => {
-                slideUpObserver.observe(item);
-            });
-            
-            // Observe architectural design section elements
-            const architecturalDesignOverlay = document.querySelector('.architectural-design-overlay');
-            if (architecturalDesignOverlay) {
-                slideUpObserver.observe(architecturalDesignOverlay);
-            }
-            
-            // Observe all architectural design items
-            document.querySelectorAll('.architectural-design-item').forEach(item => {
-                slideUpObserver.observe(item);
-            });
-            
-            // Observe landscape design section elements
-            const landscapeDesignOverlay = document.querySelector('.landscape-design-overlay');
-            if (landscapeDesignOverlay) {
-                slideUpObserver.observe(landscapeDesignOverlay);
-            }
-            
-            // Observe all landscape design items
-            document.querySelectorAll('.landscape-design-item').forEach(item => {
-                slideUpObserver.observe(item);
-            });
-            
-            // Observe display design section elements
-            const displayDesignOverlay = document.querySelector('.display-design-overlay');
-            if (displayDesignOverlay) {
-                slideUpObserver.observe(displayDesignOverlay);
-            }
-            
-            // Observe all display design items
-            document.querySelectorAll('.display-design-item').forEach(item => {
-                slideUpObserver.observe(item);
-            });
-            
-            // Observe event design section elements
-            const eventDesignOverlay = document.querySelector('.event-design-overlay');
-            if (eventDesignOverlay) {
-                slideUpObserver.observe(eventDesignOverlay);
-            }
-            
-            // Observe all event design items
-            document.querySelectorAll('.event-design-item').forEach(item => {
-                slideUpObserver.observe(item);
-            });
-            
-            // Observe remodeling & renovation section elements
-            const remodelingRenovationOverlay = document.querySelector('.remodeling-renovation-overlay');
-            if (remodelingRenovationOverlay) {
-                slideUpObserver.observe(remodelingRenovationOverlay);
-            }
-            
-            // Observe all remodeling & renovation items
-            document.querySelectorAll('.remodeling-renovation-item').forEach(item => {
-                slideUpObserver.observe(item);
-            });
-            
-            
-            // Observe all gallery items
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                slideUpObserver.observe(item);
-            });
-            
-            // Observe contact section elements
-            const contactOverlay = document.querySelector('.contact-overlay');
-            if (contactOverlay) {
-                slideUpObserver.observe(contactOverlay);
-            }
-            
-            // Observe all form groups
-            document.querySelectorAll('.form-group').forEach(group => {
-                slideUpObserver.observe(group);
-            });
-            
-            // Observe WhatsApp button
-            const whatsappButton = document.querySelector('.whatsapp-button');
-            if (whatsappButton) {
-                slideUpObserver.observe(whatsappButton);
-            }
-        });
-
-        // Phone number validation - only allow numbers, +, -, spaces, and parentheses
-        document.getElementById('phone').addEventListener('input', function(e) {
-            // Remove any characters that are not numbers, +, -, spaces, or parentheses
-            this.value = this.value.replace(/[^0-9+\-\s\(\)]/g, '');
-        });
-
-        // Prevent non-numeric characters from being typed
-        document.getElementById('phone').addEventListener('keypress', function(e) {
-            const allowedChars = /[0-9+\-\s\(\)]/;
-            const key = String.fromCharCode(e.which);
-            
-            if (!allowedChars.test(key) && e.which !== 8 && e.which !== 0) {
-                e.preventDefault();
-            }
-        });
-
-        // WhatsApp functionality
-        document.getElementById('whatsappButton').addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
-            
-            if (!name || !email || !phone || !message) {
-                alert('Please fill in all fields before contacting via WhatsApp.');
-                return;
-            }
-            
-            const whatsappMessage = `Hello! I'm interested in Terra Nova's design services.
-
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-
-Brief description of my vision:
-${message}
-
-I would like to discuss my project further. Thank you!`;
-            
-            const encodedMessage = encodeURIComponent(whatsappMessage);
-            const whatsappURL = `https://wa.me/?text=${encodedMessage}`;
-            
-            window.open(whatsappURL, '_blank');
-        });
-    </script>
+    </div>
 </body>
 </html>
