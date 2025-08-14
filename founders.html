@@ -229,6 +229,127 @@
                 letter-spacing: 2px;
             }
         }
+
+        /* Animation Styles */
+        .page-title {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .page-title.slide-up {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .founder-profile {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .founder-profile.slide-up {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* First founder profile - content from left, photo from right */
+        .founder-profile:nth-child(1) .founder-content {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition-delay: 0.1s;
+        }
+
+        .founder-profile:nth-child(1) .founder-photo {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition-delay: 0.2s;
+        }
+
+        /* Second founder profile - content from right, photo from left */
+        .founder-profile:nth-child(2) .founder-content {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition-delay: 0.1s;
+        }
+
+        .founder-profile:nth-child(2) .founder-photo {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition-delay: 0.2s;
+        }
+
+        .founder-profile.slide-up .founder-content,
+        .founder-profile.slide-up .founder-photo {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Individual text element animations */
+        .founder-name {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition-delay: 0.3s;
+        }
+
+        .founder-name.slide-up {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .founder-title {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition-delay: 0.4s;
+        }
+
+        .founder-title.slide-up {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .founder-details {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition-delay: 0.5s;
+        }
+
+        .founder-details.slide-up {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hover effects */
+        .founder-photo img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .founder-photo img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(139, 88, 72, 0.3);
+        }
+
+        /* Mobile responsive animations */
+        @media (max-width: 968px) {
+            .founder-profile:nth-child(1) .founder-content,
+            .founder-profile:nth-child(2) .founder-content,
+            .founder-profile:nth-child(1) .founder-photo,
+            .founder-profile:nth-child(2) .founder-photo {
+                transform: translateY(30px);
+            }
+            
+            .founder-profile.slide-up .founder-content,
+            .founder-profile.slide-up .founder-photo {
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -303,5 +424,46 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Scroll-triggered slide-up animation
+        const observerOptions = {
+            threshold: window.innerWidth <= 768 ? 0.05 : 0.2,
+            rootMargin: window.innerWidth <= 768 ? '0px 0px 100px 0px' : '0px 0px -50px 0px'
+        };
+
+        const slideUpObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('slide-up');
+                } else {
+                    entry.target.classList.remove('slide-up');
+                }
+            });
+        }, observerOptions);
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Observe page title
+            const pageTitle = document.querySelector('.page-title');
+            if (pageTitle) {
+                slideUpObserver.observe(pageTitle);
+            }
+            
+            // Observe each founder profile
+            document.querySelectorAll('.founder-profile').forEach(profile => {
+                slideUpObserver.observe(profile);
+                
+                // Observe individual elements within each profile
+                const founderName = profile.querySelector('.founder-name');
+                const founderTitle = profile.querySelector('.founder-title');
+                const founderDetails = profile.querySelector('.founder-details');
+                
+                if (founderName) slideUpObserver.observe(founderName);
+                if (founderTitle) slideUpObserver.observe(founderTitle);
+                if (founderDetails) slideUpObserver.observe(founderDetails);
+            });
+        });
+    </script>
 </body>
 </html>
