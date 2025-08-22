@@ -97,7 +97,7 @@ body {
 .nav-logo {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(2rem, 6vw, 3.5rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.2em;
     color: #4E4B47;
     margin-bottom: 4rem;
@@ -237,7 +237,7 @@ body {
 .hero-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(6rem, 15vw, 12rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: transparent;
     text-transform: uppercase;
@@ -483,7 +483,7 @@ body {
 .approach-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(2.0rem, 5vw, 3.5rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: #4E4B47;
     text-transform: uppercase;
@@ -552,7 +552,7 @@ body {
 
 .approach-item strong {
     color: #4E4B47;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* Clientele Section */
@@ -617,7 +617,7 @@ body {
 .clientele-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.5rem, 5vw, 3.5rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: #4E4B47;
     text-transform: uppercase;
@@ -713,7 +713,7 @@ body {
 .our-vision-page-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(3rem, 6vw, 4.5rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: #4E4B47;
     text-transform: uppercase;
@@ -809,7 +809,7 @@ body {
 .our-vision-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: #4E4B47;
     text-transform: uppercase;
@@ -829,7 +829,7 @@ body {
 .our-vision-subtitle {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.4rem, 2.8vw, 1.8rem);
-    font-weight: bold;
+    font-weight: normal;
     color: #4E4B47;
     margin-bottom: 2rem;
     line-height: 1.3;
@@ -871,7 +871,7 @@ body {
 
 .our-vision-paragraph strong {
     color: #4E4B47;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* Our Story Section */
@@ -936,7 +936,7 @@ body {
 .our-story-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: #4E4B47;
     text-transform: uppercase;
@@ -972,7 +972,7 @@ body {
 .our-story-subtitle {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.1rem, 2.2vw, 1.3rem);
-    font-weight: bold;
+    font-weight: normal;
     color: #4E4B47;
     margin-bottom: 1.5rem;
     line-height: 1.4;
@@ -1051,7 +1051,7 @@ body {
 .founder-section-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.4rem, 2.8vw, 1.8rem);
-    font-weight: bold;
+    font-weight: normal;
     color: #4E4B47;
     margin: 2rem 0 1rem 0;
     line-height: 1.3;
@@ -1102,7 +1102,7 @@ body {
 .process-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.5rem, 5vw, 3.5rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: #4E4B47;
     text-transform: uppercase;
@@ -1227,7 +1227,7 @@ body {
 .contact-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.5rem, 5vw, 3.5rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: #4E4B47;
     text-transform: uppercase;
@@ -1281,7 +1281,7 @@ body {
 .form-label {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.1rem, 2.2vw, 1.3rem);
-    font-weight: 600;
+    font-weight: 400;
     color: #4E4B47;
     margin-bottom: 0.5rem;
 }
@@ -1318,7 +1318,7 @@ body {
     border-radius: 50px;
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.1rem, 2.2vw, 1.3rem);
-    font-weight: 600;
+    font-weight: 400;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
@@ -1384,7 +1384,7 @@ body {
 .craft-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.5rem, 5vw, 3.5rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: #4E4B47;
     text-transform: uppercase;
@@ -1495,7 +1495,7 @@ body {
 .interior-design-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.5rem, 5vw, 3.5rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: #4E4B47;
     text-transform: uppercase;
@@ -1577,7 +1577,7 @@ body {
 
 .interior-design-item strong {
     color: #4E4B47;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* Architectural Design Section */
@@ -1619,7 +1619,7 @@ body {
 .architectural-design-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.5rem, 5vw, 3.5rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: #4E4B47;
     text-transform: uppercase;
@@ -1693,7 +1693,7 @@ body {
 
 .architectural-design-item strong {
     color: #4E4B47;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* Landscape Design Section */
@@ -1735,7 +1735,7 @@ body {
 .landscape-design-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.5rem, 5vw, 3.5rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: #4E4B47;
     text-transform: uppercase;
@@ -1813,7 +1813,7 @@ body {
 
 .landscape-design-item strong {
     color: #4E4B47;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* Display Design Section */
@@ -1855,7 +1855,7 @@ body {
 .display-design-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.5rem, 5vw, 3.5rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: #4E4B47;
     text-transform: uppercase;
@@ -1937,7 +1937,7 @@ body {
 
 .display-design-item strong {
     color: #4E4B47;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* About Us Section */
@@ -1979,7 +1979,7 @@ body {
 .about-us-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.5rem, 5vw, 3.5rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: #4E4B47;
     text-transform: uppercase;
@@ -2018,7 +2018,7 @@ body {
 .founder-name {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: bold;
+    font-weight: normal;
     color: #4E4B47;
     margin-bottom: 0.5rem;
     line-height: 1.3;
@@ -2028,7 +2028,7 @@ body {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.2rem, 2.5vw, 1.4rem);
     color: #4E4B47;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 1rem;
     line-height: 1.4;
 }
@@ -2109,7 +2109,7 @@ body {
 .event-design-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.5rem, 5vw, 3.5rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: #4E4B47;
     text-transform: uppercase;
@@ -2195,7 +2195,7 @@ body {
 
 .event-design-item strong {
     color: #4E4B47;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* Remodeling & Renovation Section */
@@ -2237,7 +2237,7 @@ body {
 .remodeling-renovation-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.5rem, 5vw, 3.5rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: #4E4B47;
     text-transform: uppercase;
@@ -2327,7 +2327,7 @@ body {
 
 .remodeling-renovation-item strong {
     color: #4E4B47;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* Gallery Section */
@@ -3040,7 +3040,7 @@ body {
 .vision-main-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.8rem, 3.6vw, 2.4rem);
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.05em;
     color: #4E4B47;
     text-transform: uppercase;
@@ -3076,7 +3076,7 @@ body {
 .vision-section-title {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-    font-weight: bold;
+    font-weight: normal;
     color: #4E4B47;
     text-transform: uppercase;
     letter-spacing: 0.05em;
