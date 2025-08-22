@@ -98,7 +98,7 @@ body {
     font-family: 'Garamond', 'Times New Roman', serif;
     font-size: clamp(2rem, 6vw, 3.5rem);
     font-weight: normal;
-    letter-spacing: 0.2em;
+    letter-spacing: 2px;
     color: #4E4B47;
     margin-bottom: 4rem;
     text-transform: uppercase;
@@ -120,7 +120,7 @@ body {
     font-family: 'SangBleu Sans', Arial, sans-serif;
     font-size: clamp(0.75rem, 2vw, 1.25rem);
     font-weight: 400;
-    letter-spacing: 0.3em;
+    letter-spacing: 2px;
     text-transform: uppercase;
     transition: all 0.3s ease;
     position: relative;

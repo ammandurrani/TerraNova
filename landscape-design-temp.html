@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remodeling & Renovations - Terra Nova</title>
+    <title>Exterior Design - Terra Nova</title>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=SangBleu+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Override body background for remodeling page */
+        /* Override body background for exterior design page */
         body {
             background-color: #FFFFFF;
         }
@@ -54,17 +54,6 @@
         .nav-links a:hover {
             color: #5a4a3a;
         }
-        
-        /* White color for HOME and ABOUT menu items */
-        .nav-links > li:nth-child(1) > a,
-        .nav-links > li:nth-child(2) > a {
-            color: white;
-        }
-        
-        .nav-links > li:nth-child(1) > a:hover,
-        .nav-links > li:nth-child(2) > a:hover {
-            color: #f0f0f0;
-        }
 
         /* Remove underline on hover */
         .nav-links a::after {
@@ -80,7 +69,7 @@
             display: none;
             position: absolute;
             background-color: rgba(233, 220, 215, 0.95);
-            min-width: 240px;
+            min-width: 200px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1000;
             top: 100%;
@@ -96,7 +85,6 @@
             font-size: 16px;
             letter-spacing: 2px;
             border-bottom: 1px solid #f0f0f0;
-            white-space: nowrap;
         }
 
         .dropdown-content a:hover {
@@ -149,61 +137,36 @@
     <section class="vision-hero-section">
         <div class="vision-hero-container">
             <div class="vision-hero-image">
-                <img src="images/remodeling.png" alt="Terra Nova Remodeling & Renovations" class="vision-img">
+                <img src="images/Exterior    Design.png" alt="Terra Nova Exterior Design" class="vision-img">
             </div>
             <div class="vision-hero-content">
-                <h1 class="vision-main-title">REMODELING & RENOVATIONS</h1>
+                <h1 class="vision-main-title">EXTERIOR DESIGN</h1>
                 <div class="vision-sections">
                     <div class="vision-section">
-                        <div class="remodeling-section">
-                            <h3 class="section-title">REMODELING SERVICES</h3>
-                            <div class="remodeling-bullets">
-                                <div class="remodeling-bullet-item">
-                                    <span class="bullet-point">■</span>
-                                    <span class="bullet-text">Architectural detailing repairs</span>
-                                </div>
-                                <div class="remodeling-bullet-item">
-                                    <span class="bullet-point">■</span>
-                                    <span class="bullet-text">Stone, marble, tile, & wood restoration</span>
-                                </div>
-                                <div class="remodeling-bullet-item">
-                                    <span class="bullet-point">■</span>
-                                    <span class="bullet-text">Luxury fixture & hardware replacement</span>
-                                </div>
-                                <div class="remodeling-bullet-item">
-                                    <span class="bullet-point">■</span>
-                                    <span class="bullet-text">Surface refinishing</span>
-                                </div>
+                        <div class="exterior-design-bullets">
+                            <div class="exterior-design-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Structural integration of design concepts</span>
                             </div>
-                        </div>
-                        
-                        <div class="renovation-section">
-                            <h3 class="section-title">RENOVATION SERVICES</h3>
-                            <div class="remodeling-bullets">
-                                <div class="remodeling-bullet-item">
-                                    <span class="bullet-point">■</span>
-                                    <span class="bullet-text">Full-space reconfiguration</span>
-                                </div>
-                                <div class="remodeling-bullet-item">
-                                    <span class="bullet-point">■</span>
-                                    <span class="bullet-text">Kitchen & bath luxury renovations</span>
-                                </div>
-                                <div class="remodeling-bullet-item">
-                                    <span class="bullet-point">■</span>
-                                    <span class="bullet-text">Flooring & lighting upgrades</span>
-                                </div>
-                                <div class="remodeling-bullet-item">
-                                    <span class="bullet-point">■</span>
-                                    <span class="bullet-text">Smart home integration</span>
-                                </div>
-                                <div class="remodeling-bullet-item">
-                                    <span class="bullet-point">■</span>
-                                    <span class="bullet-text">Design-build coordination</span>
-                                </div>
-                                <div class="remodeling-bullet-item">
-                                    <span class="bullet-point">■</span>
-                                    <span class="bullet-text">End-to-end delivery including reconstruction</span>
-                                </div>
+                            <div class="exterior-design-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Site & contextual design</span>
+                            </div>
+                            <div class="exterior-design-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Signature façade design & sculptural detailing</span>
+                            </div>
+                            <div class="exterior-design-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Custom pavilion & outbuilding design</span>
+                            </div>
+                            <div class="exterior-design-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Architectural lighting design</span>
+                            </div>
+                            <div class="exterior-design-bullet-item">
+                                <span class="bullet-point">■</span>
+                                <span class="bullet-text">Turnkey exterior design & delivery</span>
                             </div>
                         </div>
                     </div>
@@ -229,6 +192,7 @@
             });
         }, observerOptions);
 
+        // Wait for DOM to be fully loaded
         document.addEventListener('DOMContentLoaded', () => {
             const content = document.querySelector('.vision-hero-content');
             if (content) slideUpObserver.observe(content);
@@ -240,7 +204,7 @@
             const image = document.querySelector('.vision-hero-image');
             if (image) slideUpObserver.observe(image);
 
-            document.querySelectorAll('.remodeling-bullet-item').forEach((item, index) => {
+            document.querySelectorAll('.exterior-design-bullet-item').forEach((item, index) => {
                 item.style.transitionDelay = `${0.1 + (index * 0.1)}s`;
                 slideUpObserver.observe(item);
             });
@@ -248,21 +212,11 @@
     </script>
 
     <style>
-        /* Remodeling-specific styles */
-        /* Add padding to push content down from navbar */
-        .vision-hero-content {
-            padding-top: 180px !important;
-        }
-        
-        /* Override title alignment for remodeling page */
+        /* Exterior Design-specific styles */
+        /* Override title alignment for exterior design page */
         .vision-main-title {
             text-align: left !important;
-            padding-left: 0;
-            margin-left: 0;
-            font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
-            letter-spacing: 4px !important;
-            margin-bottom: 30px !important;
-            white-space: nowrap !important;
+            padding-left: 15%;
         }
         
         .vision-sections {
@@ -273,13 +227,15 @@
             display: block;
         }
         
-        .remodeling-bullets {
+        .exterior-design-bullets {
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 1.5rem;
+            padding-left: 2rem;
+            width: auto;
         }
 
-        .remodeling-bullet-item {
+        .exterior-design-bullet-item {
             display: flex;
             align-items: flex-start;
             gap: 1rem;
@@ -288,7 +244,7 @@
             transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        .remodeling-bullet-item.slide-up {
+        .exterior-design-bullet-item.slide-up {
             opacity: 1;
             transform: translateY(0);
         }
@@ -308,26 +264,12 @@
             text-align: left;
         }
 
-
-        .section-title {
-            margin-bottom: 1.5rem;
-            margin-top: 0;
-        }
-
-        .remodeling-section, .renovation-section {
-            margin-bottom: 2.5rem;
-        }
-
-        .renovation-section {
-            margin-bottom: 0;
-        }
-
         @media (max-width: 768px) {
-            .remodeling-bullets {
+            .exterior-design-bullets {
                 gap: 1.2rem;
             }
             
-            .remodeling-bullet-item {
+            .exterior-design-bullet-item {
                 gap: 0.8rem;
             }
             
@@ -338,7 +280,7 @@
         }
 
         @media (max-width: 480px) {
-            .remodeling-bullets {
+            .exterior-design-bullets {
                 gap: 1rem;
             }
             
