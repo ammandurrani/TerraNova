@@ -7,7 +7,7 @@
 body {
     font-family: 'Garamond', 'Times New Roman', serif;
     overflow-x: hidden;
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     margin: 0;
     padding: 0;
 }
@@ -216,7 +216,7 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -326,7 +326,7 @@ body {
 
 /* About Section */
 .about-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 40px 40px 80px 40px;
     display: flex;
     align-items: flex-start;
@@ -384,7 +384,7 @@ body {
 
 /* Image Section */
 .image-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 80px 40px;
     display: flex;
     align-items: center;
@@ -423,7 +423,7 @@ body {
 
 /* Approach Section */
 .approach-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 80px 40px;
     display: flex;
     align-items: center;
@@ -557,7 +557,7 @@ body {
 
 /* Clientele Section */
 .clientele-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 80px 40px;
     display: flex;
     align-items: center;
@@ -701,7 +701,7 @@ body {
 
 /* Our Vision Section */
 .our-vision-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 80px 40px;
     display: flex;
     flex-direction: column;
@@ -876,7 +876,7 @@ body {
 
 /* Our Story Section */
 .our-story-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 80px 40px;
     display: flex;
     align-items: center;
@@ -1066,7 +1066,7 @@ body {
 
 /* Process Section */
 .process-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 80px 40px;
     display: flex;
     align-items: center;
@@ -1190,7 +1190,7 @@ body {
 
 /* Contact Section */
 .contact-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 80px 40px;
     display: flex;
     align-items: center;
@@ -1209,7 +1209,7 @@ body {
 
 .contact-overlay {
     width: 100%;
-    background: linear-gradient(180deg, #F2E7E3 0%, #F9F3EF 100%);
+    background: linear-gradient(180deg, #F2E7E3 0%, #E9DCD7 100%);
     padding: 60px 80px;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(139, 88, 72, 0.2);
@@ -1347,7 +1347,7 @@ body {
 
 /* Craft Section */
 .craft-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 80px 40px;
     display: flex;
     align-items: center;
@@ -1366,7 +1366,7 @@ body {
 
 .craft-overlay {
     width: 80%;
-    background: linear-gradient(180deg, #F2E7E3 0%, #F9F3EF 100%);
+    background: linear-gradient(180deg, #F2E7E3 0%, #E9DCD7 100%);
     padding: 60px 80px;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(139, 88, 72, 0.2);
@@ -1458,7 +1458,7 @@ body {
 
 /* Interior Design Section */
 .interior-design-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 80px 40px;
     display: flex;
     align-items: center;
@@ -1477,7 +1477,7 @@ body {
 
 .interior-design-overlay {
     width: 80%;
-    background: linear-gradient(180deg, #F2E7E3 0%, #F9F3EF 100%);
+    background: linear-gradient(180deg, #F2E7E3 0%, #E9DCD7 100%);
     padding: 60px 80px;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(139, 88, 72, 0.2);
@@ -1582,7 +1582,7 @@ body {
 
 /* Architectural Design Section */
 .architectural-design-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 80px 40px;
     display: flex;
     align-items: center;
@@ -1601,7 +1601,7 @@ body {
 
 .architectural-design-overlay {
     width: 80%;
-    background: linear-gradient(180deg, #F2E7E3 0%, #F9F3EF 100%);
+    background: linear-gradient(180deg, #F2E7E3 0%, #E9DCD7 100%);
     padding: 60px 80px;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(139, 88, 72, 0.2);
@@ -1698,7 +1698,7 @@ body {
 
 /* Landscape Design Section */
 .landscape-design-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 80px 40px;
     display: flex;
     align-items: center;
@@ -1717,7 +1717,7 @@ body {
 
 .landscape-design-overlay {
     width: 80%;
-    background: linear-gradient(180deg, #F2E7E3 0%, #F9F3EF 100%);
+    background: linear-gradient(180deg, #F2E7E3 0%, #E9DCD7 100%);
     padding: 60px 80px;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(139, 88, 72, 0.2);
@@ -1818,7 +1818,7 @@ body {
 
 /* Display Design Section */
 .display-design-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 80px 40px;
     display: flex;
     align-items: center;
@@ -1837,7 +1837,7 @@ body {
 
 .display-design-overlay {
     width: 80%;
-    background: linear-gradient(180deg, #F2E7E3 0%, #F9F3EF 100%);
+    background: linear-gradient(180deg, #F2E7E3 0%, #E9DCD7 100%);
     padding: 60px 80px;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(139, 88, 72, 0.2);
@@ -1942,7 +1942,7 @@ body {
 
 /* About Us Section */
 .about-us-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 80px 40px;
     display: flex;
     align-items: center;
@@ -1961,7 +1961,7 @@ body {
 
 .about-us-overlay {
     width: 80%;
-    background: linear-gradient(180deg, #F2E7E3 0%, #F9F3EF 100%);
+    background: linear-gradient(180deg, #F2E7E3 0%, #E9DCD7 100%);
     padding: 60px 80px;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(139, 88, 72, 0.2);
@@ -2072,7 +2072,7 @@ body {
 
 /* Event Design Section */
 .event-design-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 80px 40px;
     display: flex;
     align-items: center;
@@ -2091,7 +2091,7 @@ body {
 
 .event-design-overlay {
     width: 80%;
-    background: linear-gradient(180deg, #F2E7E3 0%, #F9F3EF 100%);
+    background: linear-gradient(180deg, #F2E7E3 0%, #E9DCD7 100%);
     padding: 60px 80px;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(139, 88, 72, 0.2);
@@ -2200,7 +2200,7 @@ body {
 
 /* Remodeling & Renovation Section */
 .remodeling-renovation-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 80px 40px;
     display: flex;
     align-items: center;
@@ -2219,7 +2219,7 @@ body {
 
 .remodeling-renovation-overlay {
     width: 80%;
-    background: linear-gradient(180deg, #F2E7E3 0%, #F9F3EF 100%);
+    background: linear-gradient(180deg, #F2E7E3 0%, #E9DCD7 100%);
     padding: 60px 80px;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(139, 88, 72, 0.2);
@@ -2332,7 +2332,7 @@ body {
 
 /* Gallery Section */
 .gallery-section {
-    background-color: #F9F3EF;
+    background-color: #E9DCD7;
     padding: 80px 40px;
     display: flex;
     align-items: center;
