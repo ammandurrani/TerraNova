@@ -4,50 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Terra Nova</title>
-    <link href="https://fonts.googleapis.com/css2?family=SangBleu+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Override body background for contact page */
+        body {
+            background-color: #E9DCD7;
+            font-family: 'EB Garamond', serif;
+            color: #4E4B47;
+        }
+
+        /* Override navbar styles to match home page */
+        .navbar {
+            background-color: transparent !important;
+            background: none !important;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #8D5848;
+            font-weight: 400;
+            font-size: 18px;
+            font-family: 'EB Garamond', serif;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: #5a4a3a;
+        }
+
+        /* Remove underline on hover */
+        .nav-links a::after {
+            display: none !important;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(233, 220, 215, 0.95);
+            min-width: 240px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown-content a {
+            color: #8D5848;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-family: 'EB Garamond', serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #f0f0f0;
+            white-space: nowrap;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #E0D0C5;
+            color: #5a4a3a;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Hide any hamburger elements */
+        .hamburger, .nav-overlay, .nav-close {
+            display: none !important;
+        }
+    </style>
 </head>
 <body>
-    <!-- Hamburger Menu -->
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="nav-overlay" id="nav-overlay">
-            <div class="nav-close" id="nav-close">×</div>
-            <div class="nav-content">
-                <h1 class="nav-logo">TERRA NOVA</h1>
-                <ul class="nav-links">
-                    <li><a href="index.html">HOME</a></li>
-                    <li class="nav-dropdown">
-                        <a href="#" class="nav-dropdown-toggle">ABOUT</a>
-                        <ul class="nav-dropdown-menu">
-                            <li><a href="about-us.html">ABOUT US</a></li>
-                            <li><a href="our-story.html">OUR STORY</a></li>
-                            <li><a href="vision.html">VISION</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="approach.html">APPROACH</a></li>
-                    <li><a href="process.html">PROCESS</a></li>
-                    <li class="nav-dropdown">
-                        <a href="#" class="nav-dropdown-toggle">CRAFT</a>
-                        <ul class="nav-dropdown-menu">
-                            <li><a href="interior-design.html">INTERIOR DESIGN</a></li>
-                            <li><a href="exterior-design.html">EXTERIOR DESIGN</a></li>
-                            <li><a href="landscape-design.html">LANDSCAPE DESIGN</a></li>
-                            <li><a href="display-design.html">DISPLAY DESIGN</a></li>
-                            <li><a href="event-design.html">EVENT DESIGN</a></li>
-                            <li><a href="floral-design.html">FLORAL DESIGN</a></li>
-                            <li><a href="remodeling.html">REMODELING & RENOVATIONS</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="clientele.html">CLIENTELE</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </div>
-        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown">
+                <a href="#">ABOUT</a>
+                <div class="dropdown-content">
+                    <a href="founders.html">FOUNDERS</a>
+                    <a href="our-story.html">OUR STORY</a>
+                    <a href="vision.html">VISION</a>
+                </div>
+            </li>
+            <li><a href="approach.html">APPROACH</a></li>
+            <li><a href="process.html">PROCESS</a></li>
+            <li class="dropdown">
+                <a href="#">CRAFT</a>
+                <div class="dropdown-content">
+                    <a href="interior-design.html">INTERIOR DESIGN</a>
+                    <a href="exterior-design.html">EXTERIOR DESIGN</a>
+                    <a href="landscape-design.html">LANDSCAPE DESIGN</a>
+                    <a href="display-design.html">DISPLAY DESIGN</a>
+                    <a href="event-design.html">EVENT DESIGN</a>
+                    <a href="floral-design.html">FLORAL DESIGN</a>
+                    <a href="remodeling.html">REMODELING & RENOVATIONS</a>
+                </div>
+            </li>
+            <li><a href="clientele.html">CLIENTELE</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
     </nav>
 
     <section class="contact-section">
@@ -58,27 +147,42 @@
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
+                        <div class="input-wrapper">
+                            <input type="text" id="name" name="name" maxlength="30" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
                     </div>
                     
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                        <div class="input-wrapper">
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
                     </div>
                     
                     <div class="form-group">
                         <label for="phone">Phone:</label>
-                        <input type="tel" id="phone" name="phone" required>
+                        <div class="input-wrapper">
+                            <input type="tel" id="phone" name="phone" maxlength="12" required>
+                            <span class="error-message" id="phone-error"></span>
+                        </div>
                     </div>
                     
                     <div class="form-group">
                         <label for="query">Query:</label>
-                        <textarea id="query" name="query" rows="4" required></textarea>
+                        <div class="textarea-wrapper">
+                            <textarea id="query" name="query" rows="4" maxlength="125" required></textarea>
+                            <div class="char-counter"><span id="charCount">0</span>/125</div>
+                            <span class="error-message" id="query-error"></span>
+                        </div>
                     </div>
                     
+                    <button type="submit" class="submit-btn">SEND MESSAGE</button>
+                    
                     <div class="contact-info">
-                        <p>(Terra Nova)WhatsApp</p>
-                        <p>(Terra Nova)Email:</p>
+                        <p>WhatsApp: +92 XXX XXXXXXX</p>
+                        <p>Email: info@terranovaluxury.com</p>
                     </div>
                 </form>
             </div>
@@ -86,238 +190,600 @@
     </section>
 
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const navOverlay = document.getElementById('nav-overlay');
-        const navClose = document.getElementById('nav-close');
-
-        hamburger.addEventListener('click', () => {
-            window.location.href = 'index.html';
-        });
-
-        navClose.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navOverlay.classList.remove('active');
-        });
-
-        document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                const dropdown = toggle.parentElement;
-                dropdown.classList.toggle('active');
-            });
-        });
-
-        document.querySelectorAll('.nav-links a:not(.nav-dropdown-toggle)').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navOverlay.classList.remove('active');
-            });
-        });
-
-        // Form animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const fadeInObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-
-        document.addEventListener('DOMContentLoaded', () => {
+        // Simple fade-in animation on page load
+        window.addEventListener('load', () => {
             const contactContainer = document.querySelector('.contact-container');
             if (contactContainer) {
-                fadeInObserver.observe(contactContainer);
+                contactContainer.style.opacity = '1';
+                contactContainer.style.transform = 'translateY(0)';
+            }
+        });
+
+        // Form validation functions
+        function showError(inputId, message) {
+            const input = document.getElementById(inputId);
+            const errorElement = document.getElementById(inputId + '-error');
+            input.classList.add('error');
+            errorElement.textContent = message;
+            errorElement.classList.add('show');
+        }
+
+        function clearError(inputId) {
+            const input = document.getElementById(inputId);
+            const errorElement = document.getElementById(inputId + '-error');
+            input.classList.remove('error');
+            errorElement.textContent = '';
+            errorElement.classList.remove('show');
+        }
+
+        // Name validation - only letters and spaces, max 30 chars
+        function validateName() {
+            const nameInput = document.getElementById('name');
+            const name = nameInput.value.trim();
+            const nameRegex = /^[a-zA-Z\s]+$/;
+            
+            if (!name) {
+                showError('name', 'Name is required');
+                return false;
+            }
+            if (!nameRegex.test(name)) {
+                showError('name', 'Name can only contain letters and spaces');
+                return false;
+            }
+            if (name.length > 30) {
+                showError('name', 'Name must not exceed 30 characters');
+                return false;
+            }
+            clearError('name');
+            return true;
+        }
+
+        // Email validation
+        function validateEmail() {
+            const emailInput = document.getElementById('email');
+            const email = emailInput.value.trim();
+            
+            // Check if email is empty
+            if (!email) {
+                showError('email', 'Email is required');
+                return false;
+            }
+            
+            // Check for spaces
+            if (email.includes(' ')) {
+                showError('email', 'Email cannot contain spaces');
+                return false;
+            }
+            
+            // Check if @ exists
+            if (!email.includes('@')) {
+                showError('email', 'Email must contain @ character');
+                return false;
+            }
+            
+            // Check if email starts with special character
+            const specialChars = "~!$%^&*_=+}{'?-.@";
+            if (specialChars.includes(email[0])) {
+                showError('email', 'Email cannot start with a special character');
+                return false;
+            }
+            
+            // Check for consecutive special characters anywhere in the email
+            for (let i = 0; i < email.length - 1; i++) {
+                if (specialChars.includes(email[i]) && specialChars.includes(email[i + 1])) {
+                    showError('email', 'Email cannot have consecutive special characters');
+                    return false;
+                }
+            }
+            
+            // Complex email validation regex
+            // Must start with alphanumeric, allows special chars: ~!$%^&*_=+}{'?-.
+            // But not consecutive special chars
+            const emailRegex = /^[a-zA-Z0-9][a-zA-Z0-9~!$%^&*_=+}{'?.-]*@[a-zA-Z0-9][a-zA-Z0-9~!$%^&*_=+}{'?.-]*\.[a-zA-Z0-9]+$/;
+            
+            if (!emailRegex.test(email)) {
+                showError('email', 'Invalid email format');
+                return false;
+            }
+            
+            clearError('email');
+            return true;
+        }
+
+        // Phone validation - only numbers, warn if less than 10 digits
+        function validatePhone() {
+            const phoneInput = document.getElementById('phone');
+            const phone = phoneInput.value.trim();
+            const phoneRegex = /^[0-9]+$/;
+            
+            if (!phone) {
+                showError('phone', 'Phone number is required');
+                return false;
+            }
+            if (!phoneRegex.test(phone)) {
+                showError('phone', 'Phone number can only contain digits');
+                return false;
+            }
+            if (phone.length < 10) {
+                showError('phone', 'Phone number seems to be incomplete');
+                return false;
+            }
+            clearError('phone');
+            return true;
+        }
+
+        // Query validation
+        function validateQuery() {
+            const queryInput = document.getElementById('query');
+            const query = queryInput.value;
+            
+            if (!query.trim()) {
+                showError('query', 'Query is required');
+                return false;
+            }
+            
+            // Check for consecutive special characters
+            const specialChars = "~!$%^&*_=+}{'?-.";
+            for (let i = 0; i < query.length - 1; i++) {
+                if (specialChars.includes(query[i]) && specialChars.includes(query[i + 1])) {
+                    showError('query', 'Query cannot have consecutive special characters');
+                    return false;
+                }
+            }
+            
+            // Check if query contains only allowed characters
+            // Allows letters (uppercase/lowercase), numbers, spaces, and specified special characters
+            const queryRegex = /^[a-zA-Z0-9\s~!$%^&*_=+}{'?.-]+$/;
+            if (!queryRegex.test(query)) {
+                showError('query', 'Query can only contain letters, numbers, spaces, and these special characters: ~!$%^&*_=+}{\'?-.');
+                return false;
+            }
+            
+            clearError('query');
+            return true;
+        }
+
+        // Add real-time validation
+        document.getElementById('name').addEventListener('input', function(e) {
+            // Prevent numbers and special characters
+            e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, '');
+            if (e.target.value.length > 0) {
+                validateName();
+            }
+        });
+
+        document.getElementById('email').addEventListener('blur', validateEmail);
+        
+        // Also validate email on input to prevent spaces
+        document.getElementById('email').addEventListener('input', function(e) {
+            // Remove spaces from email
+            e.target.value = e.target.value.replace(/\s/g, '');
+            if (e.target.value.length > 0) {
+                validateEmail();
+            }
+        });
+        
+        document.getElementById('phone').addEventListener('input', function(e) {
+            // Only allow numbers
+            e.target.value = e.target.value.replace(/[^0-9]/g, '');
+            if (e.target.value.length > 0) {
+                validatePhone();
+            }
+        });
+
+        document.getElementById('query').addEventListener('input', function(e) {
+            const allowedSpecial = "~!$%^&*_=+}{'?-."; // allowed special characters
+            const value = e.target.value;
+            let cleaned = '';
+            let lastWasSpecial = false;
+
+            for (let i = 0; i < value.length; i++) {
+                const ch = value[i];
+                const isAllowedSpecial = allowedSpecial.includes(ch);
+                const isAlphaNumOrSpace = /[a-zA-Z0-9\s]/.test(ch); // letters, numbers, any whitespace (spaces/newlines)
+
+                if (isAllowedSpecial) {
+                    if (lastWasSpecial) {
+                        // Prevent consecutive special characters
+                        continue;
+                    }
+                    cleaned += ch;
+                    lastWasSpecial = true;
+                } else if (isAlphaNumOrSpace) {
+                    cleaned += ch;
+                    lastWasSpecial = false;
+                } else {
+                    // Disallowed character: drop it
+                    continue;
+                }
+            }
+
+            if (value !== cleaned) {
+                e.target.value = cleaned;
+            }
+
+            // Keep character counter in sync
+            document.getElementById('charCount').textContent = e.target.value.length;
+
+            validateQuery();
+        });
+
+        // Character counter for query textarea
+        const queryTextarea = document.getElementById('query');
+        const charCountSpan = document.getElementById('charCount');
+        
+        queryTextarea.addEventListener('input', () => {
+            const currentLength = queryTextarea.value.length;
+            charCountSpan.textContent = currentLength;
+        });
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Validate all fields
+            const isNameValid = validateName();
+            const isEmailValid = validateEmail();
+            const isPhoneValid = validatePhone();
+            const isQueryValid = validateQuery();
+            
+            // If all validations pass, submit the form
+            if (isNameValid && isEmailValid && isPhoneValid && isQueryValid) {
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const query = document.getElementById('query').value;
+                
+                // Format message for WhatsApp
+                const message = `*New Contact Form Submission*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A%0A*Query:*%0A${query}`;
+                
+                // Replace with actual WhatsApp number when available
+                // Format: country code without + (e.g., 92 for Pakistan) followed by number
+                const whatsappNumber = '92XXXXXXXXX'; // They need to add their actual number here
+                
+                // Create WhatsApp URL
+                const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+                
+                // Open WhatsApp in new tab
+                window.open(whatsappURL, '_blank');
+                
+                // Optional: Reset form after submission
+                // document.getElementById('contactForm').reset();
+                // document.getElementById('charCount').textContent = '0';
             }
         });
     </script>
 
     <style>
-        .hamburger {
-            display: flex !important;
-            flex-direction: column;
-            cursor: pointer;
-            width: 30px;
-            height: 24px;
-            justify-content: space-between;
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 1001;
-        }
-
-        .hamburger span {
-            width: 100%;
-            height: 3px;
-            background-color: #4E4B47 !important;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-            display: block;
-        }
-
+        /* Contact Section Styles */
         .contact-section {
             min-height: 100vh;
             background-color: #E9DCD7;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 80px 20px 40px;
+            padding: 60px 20px;
         }
 
         .contact-container {
-            max-width: 1200px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
             opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s ease;
-        }
-
-        .contact-container.fade-in {
-            opacity: 1;
-            transform: translateY(0);
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
         .contact-title {
-            font-family: 'Garamond', 'Times New Roman', serif;
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: normal;
-            color: #4E4B47;
+            font-family: 'EB Garamond', serif;
+            font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+            font-weight: 400;
+            color: #8D5848;
             text-align: center;
-            margin-bottom: 2.5rem;
-            letter-spacing: 0.1em;
+            margin-bottom: 3rem;
+            letter-spacing: 8px;
             text-transform: uppercase;
-            width: 100%;
         }
 
         .contact-content {
-            width: 100%;
+            padding: 40px;
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            padding-left: 20%;
+            justify-content: center;
         }
 
+        /* Minimal Form Style */
         .contact-form {
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
+            max-width: 700px;
+            margin: 0 auto;
             width: 100%;
-            max-width: 500px;
-            margin: 0;
-            padding: 20px;
-            position: relative;
         }
 
         .form-group {
-            display: flex !important;
-            flex-direction: row !important;
-            align-items: center !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            width: 100%;
-            margin-bottom: 20px;
-            gap: 20px;
-        }
-
-        .form-group:last-of-type {
-            margin-bottom: 0px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            gap: 15px;
+            justify-content: flex-start;
+            padding-left: 20px;
         }
 
         .form-group label {
-            font-family: 'Garamond', 'Times New Roman', serif;
-            font-size: 1.2rem;
-            color: #4E4B47 !important;
-            margin: 0;
-            font-weight: normal;
-            display: inline-block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
+            font-family: 'EB Garamond', serif;
+            font-size: 1.1rem;
+            color: #6B6865;
+            font-weight: 400;
             width: 80px;
+            text-align: right;
             flex-shrink: 0;
-            white-space: nowrap;
         }
 
         .form-group input,
         .form-group textarea {
-            border: none !important;
-            background: transparent !important;
-            padding: 8px 0 !important;
-            font-family: 'Garamond', 'Times New Roman', serif !important;
-            font-size: 1rem !important;
-            color: #4E4B47 !important;
-            outline: none !important;
-            flex: 1 !important;
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            box-sizing: border-box !important;
-            height: auto !important;
-            min-height: 30px !important;
-            width: 100% !important;
-            cursor: text !important;
+            width: 480px;
+            padding: 10px 15px;
+            border: 1px solid #D0C0B5;
+            background-color: rgba(255, 255, 255, 0.8);
+            font-family: 'EB Garamond', serif;
+            font-size: 1rem;
+            color: #4E4B47;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
-            outline: none !important;
+            outline: none;
+            border-color: #8D5848;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0 0 2px rgba(141, 88, 72, 0.1);
         }
 
         .form-group textarea {
-            resize: vertical;
-            min-height: 80px;
-            font-family: 'Garamond', 'Times New Roman', serif;
+            resize: none;
+            min-height: 100px;
+            max-height: 100px;
+            width: 100%;
         }
 
-        .form-group:has(textarea) {
-            align-items: flex-start !important;
+        /* Input and Textarea wrapper styles */
+        .input-wrapper {
+            width: 480px;
+            position: relative;
         }
 
+        .textarea-wrapper {
+            width: 480px;
+            position: relative;
+        }
+
+        /* Error message styles */
+        .error-message {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            font-size: 0.85rem;
+            color: #d32f2f;
+            margin-top: 2px;
+            font-family: 'EB Garamond', serif;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .form-group input.error,
+        .form-group textarea.error {
+            border-color: #d32f2f;
+        }
+
+        .char-counter {
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            font-size: 0.85rem;
+            color: #999;
+            font-family: 'EB Garamond', serif;
+        }
+
+        /* Submit Button Styles */
+        .submit-btn {
+            display: block;
+            margin: 2.5rem auto;
+            padding: 12px 40px;
+            background-color: #E9DCD7; /* Same as page background */
+            border: 2px solid #8D5848; /* Same color as Contact heading */
+            color: #8D5848;
+            font-family: 'EB Garamond', serif;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 25px; /* Rounded curves */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 400;
+        }
+
+        .submit-btn:hover {
+            background-color: #8D5848;
+            color: #E9DCD7;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(141, 88, 72, 0.2);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(141, 88, 72, 0.2);
+        }
+
+        /* Contact Info - Minimal Style */
         .contact-info {
-            margin-top: -20px;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #D0C0B5;
         }
 
         .contact-info p {
-            font-family: 'Garamond', 'Times New Roman', serif;
-            font-size: clamp(1.1rem, 2.2vw, 1.3rem);
-            color: #4E4B47;
-            margin: 0;
-            font-weight: normal;
+            font-family: 'EB Garamond', serif;
+            font-size: 1rem;
+            color: #6B6865;
+            margin: 0.5rem 0;
+            letter-spacing: 1px;
         }
 
-        @media (max-width: 768px) {
-            .contact-section {
-                padding: 60px 20px 40px;
+        /* Responsive Design */
+        /* Tablet and larger mobile screens */
+        @media (max-width: 1024px) {
+            .nav-links {
+                gap: 30px;
+                font-size: 16px;
             }
             
             .contact-container {
                 max-width: 90%;
             }
-            
+        }
+
+        /* Mobile screens */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 0;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 15px;
+                padding: 0 20px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+
+            .dropdown-content {
+                position: relative;
+                width: 100%;
+                box-shadow: none;
+                margin-top: 10px;
+                background-color: rgba(224, 208, 197, 0.95);
+            }
+
+            .contact-section {
+                padding: 40px 15px;
+            }
+
             .contact-title {
+                font-size: 2rem;
+                letter-spacing: 6px;
                 margin-bottom: 2rem;
             }
-            
+
+            .contact-content {
+                padding: 20px;
+            }
+
             .contact-form {
-                gap: 1.5rem;
+                max-width: 100%;
+            }
+
+            .form-group {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+                margin-bottom: 1.2rem;
+            }
+
+            .form-group label {
+                text-align: left;
+                width: auto;
+                font-size: 1rem;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                width: 100%;
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+
+            .input-wrapper,
+            .textarea-wrapper {
+                width: 100%;
+            }
+
+            .contact-info {
+                margin-top: 2rem;
+                padding-top: 1.5rem;
+            }
+
+            .contact-info p {
+                font-size: 0.9rem;
             }
         }
 
+        /* Small mobile screens */
         @media (max-width: 480px) {
-            .contact-section {
-                padding: 50px 15px 30px;
+            .navbar {
+                padding: 10px 0;
             }
-            
-            .contact-form {
-                gap: 1.2rem;
+
+            .nav-links {
+                gap: 10px;
+                font-size: 12px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+                letter-spacing: 0.5px;
+            }
+
+            .contact-section {
+                padding: 30px 10px;
+            }
+
+            .contact-title {
+                font-size: 1.5rem;
+                letter-spacing: 4px;
+            }
+
+            .contact-content {
+                padding: 15px;
+            }
+
+            .form-group {
+                margin-bottom: 1rem;
+            }
+
+            .form-group label {
+                font-size: 0.95rem;
+                margin-bottom: 5px;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 8px 12px;
+                font-size: 16px;
+            }
+
+            .contact-info p {
+                font-size: 0.85rem;
+                letter-spacing: 0.5px;
+            }
+        }
+
+        /* Very small screens */
+        @media (max-width: 320px) {
+            .nav-links {
+                font-size: 11px;
+                gap: 8px;
+            }
+
+            .contact-title {
+                font-size: 1.3rem;
+                letter-spacing: 3px;
+            }
+
+            .contact-content {
+                padding: 10px;
             }
         }
     </style>

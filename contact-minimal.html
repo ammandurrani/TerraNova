@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Terra Nova</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'EB Garamond', serif;
+            background-color: #E9DCD7;
+            color: #4E4B47;
+            line-height: 1.6;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            padding: 20px 0;
+            text-align: center;
+            background-color: #E9DCD7;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #8D5848;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #5a4a3a;
+        }
+
+        /* Dropdown Styles */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #E9DCD7;
+            min-width: 240px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+            z-index: 1000;
+            top: 100%;
+            left: 0;
+            border: 1px solid #D0C0B5;
+        }
+
+        .dropdown-content a {
+            color: #8D5848;
+            padding: 12px 16px;
+            display: block;
+            font-size: 14px;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #E0D0C5;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #E0D0C5;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            color: #8D5848;
+            text-align: center;
+            margin-bottom: 50px;
+            letter-spacing: 8px;
+            font-weight: 400;
+        }
+
+        /* Form Styles */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            width: 100px;
+            text-align: right;
+            margin-right: 20px;
+            color: #6B6865;
+            font-size: 18px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #D0C0B5;
+            background-color: rgba(255, 255, 255, 0.9);
+            font-family: 'EB Garamond', serif;
+            font-size: 16px;
+            color: #4E4B47;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #8D5848;
+            background-color: white;
+            box-shadow: 0 0 5px rgba(141, 88, 72, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            margin-top: 40px;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #D0C0B5;
+        }
+
+        .contact-info p {
+            color: #6B6865;
+            margin: 5px 0;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 20px;
+            }
+
+            .form-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .form-group label {
+                text-align: left;
+                margin-right: 0;
+                margin-bottom: 5px;
+                width: auto;
+            }
+
+            .contact-title {
+                font-size: 2rem;
+                letter-spacing: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown">
+                <a href="#">ABOUT</a>
+                <div class="dropdown-content">
+                    <a href="founders.html">FOUNDERS</a>
+                    <a href="our-story.html">OUR STORY</a>
+                    <a href="vision.html">VISION</a>
+                </div>
+            </li>
+            <li><a href="approach.html">APPROACH</a></li>
+            <li><a href="process.html">PROCESS</a></li>
+            <li class="dropdown">
+                <a href="#">CRAFT</a>
+                <div class="dropdown-content">
+                    <a href="interior-design.html">INTERIOR DESIGN</a>
+                    <a href="exterior-design.html">EXTERIOR DESIGN</a>
+                    <a href="landscape-design.html">LANDSCAPE DESIGN</a>
+                    <a href="display-design.html">DISPLAY DESIGN</a>
+                    <a href="event-design.html">EVENT DESIGN</a>
+                    <a href="floral-design.html">FLORAL DESIGN</a>
+                    <a href="remodeling.html">REMODELING & RENOVATIONS</a>
+                </div>
+            </li>
+            <li><a href="clientele.html">CLIENTELE</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h1 class="contact-title">CONTACT</h1>
+        
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="query">Query:</label>
+                <textarea id="query" name="query" rows="4" required></textarea>
+            </div>
+            
+            <div class="contact-info">
+                <p>WhatsApp: +92 XXX XXXXXXX</p>
+                <p>Email: info@terranovaluxury.com</p>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message. We will get back to you soon!');
+        });
+    </script>
+</body>
+</html>

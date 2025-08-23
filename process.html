@@ -30,7 +30,7 @@
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 80px;
+            gap: 60px;
             margin: 0;
             padding: 0;
         }
@@ -225,11 +225,16 @@
         /* Override title alignment for process page */
         .vision-main-title {
             text-align: left !important;
-            padding-left: 15%;
+            padding-left: calc(10% + 2rem);
+            font-size: clamp(1.9rem, 3.5vw, 2.6rem) !important;
+            letter-spacing: 8px !important;
+            margin-bottom: 30px !important;
+            color: #8D5848 !important;
         }
         
         .vision-sections {
-            padding-left: 15%;
+            padding-left: 10%;
+            padding-right: 10%;
         }
         
         .vision-section {
